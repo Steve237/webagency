@@ -1,0 +1,522 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Home{% endblock %}
+
+{% block body %}
+<main>
+    <!--  BANNER AREA -->
+    <section class="bannerArea04">
+        <div class="container custom-container02">
+            <div class="row d-flex align-items-center">
+                <div class="col-lg-6 order-2 order-lg-1">
+                    <div class="bannerArea04__wrapper">
+                        <h1 class="bannerArea04__title">
+                            <span>We are</span>
+                            Programerz
+                        </h1>
+                        <p>
+                            L'expertise de la programmation informatique à votre service.
+                        </p>
+                        <div class="banner-button">
+                            <a class="primary__button primary__button-bgPrimary" href="contact.html">
+                                En savoir plus
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 order-1 order-lg-2">
+                    <div class="bannerArea04__image">
+                        <img src="{{asset('assets/img/banner/banner04.png')}}" alt="banner-image" class="img-fluid" />
+                    </div>
+                </div>
+            </div>
+            <div class="mask-page-04">
+                <img class="mask1" src="{{asset('assets/img/mask/mask-page-04.png')}}" alt="mask" />
+            </div>
+        </div>
+    </section>
+    <!--  ABOUT-INFO AREA -->
+    <section class="about-info about-info04" style="background-image: url(assets/img/about/aboutbg.png);">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 col-md-12">
+                    <div class="about-info-image">
+                        <img src="{{asset('assets/img/about/about04.png')}}" alt="Presenting A Project" />
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12">
+                    <div class="about-info-text">
+                        <h2>A <span>propos</span></h2>
+                        <p>
+                            Programerz est une société de création d'applications webs, de mobiles, et de logiciels.
+                            <br />
+                            Nous utilisons essentiellement le langage de programmation PHP, et le framework Symfony,
+                            afin de réaliser tous types d'applications webs, notamment des sites vitrines, sites ecommerce, blog, 
+                            réseaux sociaux, site de réservations, et bien d'autres, d'excellente qualité.
+                        </p>
+                        <p>
+                            Nous disposons également de compétences en marketing afin d'assurer la promotion des projets
+                            qui nous sont confiés, et de contribuer à l'augmentation de leur popularité.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="right-vcetor">
+                <img src="{{asset('assets/img/about/about-right.png')}}" alt="mask"/>
+            </div>
+        </div>
+    </section>
+   
+    <section class="stack-section">
+        <div class="container stack-content">
+            <div class="valuable-services-heading pb-60 text-center">
+                <h5 class="competence-title">
+                    Notre bagage technique
+                </h5>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="valuable-services-item mb-50">
+                        <div class="valuable-services-item-icon valuable-services-item-bg-one">
+                            <img src="{{asset('assets/img/logo/php.png')}}" alt='logo-php'>
+                        </div>
+                        <div class="valuable-services-item-text">
+                            <h6 class="competence">PHP</h6>
+                            <p class="competence">
+                                PHP est un langage de programmation libre, 
+                                utilisé pour produire des pages Web 
+                                dynamiques via un serveur HTTP.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="valuable-services-item mb-50">
+                        <div class="valuable-services-item-icon valuable-services-item-bg-two">
+                            <img src="{{asset('assets/img/logo/symfony.png')}}" alt='logo-symfony'>
+                        </div>
+                        <div class="valuable-services-item-text">
+                            <h6 class="competence">Symfony</h6>
+                            <p class="competence">
+                                Symfony est un ensemble de composants PHP ainsi qu'un framework MVC libre écrit en PHP. 
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="valuable-services-item mb-50">
+                        <div class="valuable-services-item-icon valuable-services-item-bg-three">
+                            <img src="{{asset('assets/img/logo/laravel.png')}}" alt='logo-laravel'>
+                        </div>
+                        <div class="valuable-services-item-text">
+                            <h6 class="competence">Laravel</h6>
+                            <p class="competence">
+                                Laravel est un framework web open-source écrit en PHP
+                                et développé en programmation orientée objet.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="valuable-services-item mb-50">
+                        <div class="valuable-services-item-icon valuable-services-item-bg-four">
+                            <img src="{{asset('assets/img/logo/javascript.png')}}" alt='logo-javascript'>
+                        </div>
+                        <div class="valuable-services-item-text">
+                            <h6 class="competence">Javascript</h6>
+                            <p class="competence">
+                                JavaScript est un langage de programmation de scripts 
+                                employé dans la majorité des applications webs.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="valuable-services-item mb-50">
+                        <div class="valuable-services-item-icon valuable-services-item-bg-four">
+                            <img src="{{asset('assets/img/logo/react.png')}}" alt='logo-react'>
+                        </div>
+                        <div class="valuable-services-item-text">
+                            <h6 class="competence">React</h6>
+                            <p class="competence">
+                                React est une bibliothèque JavaScript développée par Facebook, 
+                                facilitant la création d'application web monopage.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="valuable-services-item mb-50">
+                        <div class="valuable-services-item-icon valuable-services-item-bg-five">
+                            <img src="{{asset('assets/img/logo/api.png')}}" alt='logo-api'>
+                        </div>
+                        <div class="valuable-services-item-text">
+                            <h6 class="competence">Api platform</h6>
+                            <p class="competence">
+                                API Platform est un ensemble d'outils permettant la création et la consommation d'Api Rest.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="valuable-services-item mb-50">
+                        <div class="valuable-services-item-icon valuable-services-item-bg-six">
+                            <img src="{{asset('assets/img/logo/phpunit.jpg')}}" alt='logo-phpunit'>
+                        </div>
+                        <div class="valuable-services-item-text">
+                            <h6 class="competence">PHPUNIT</h6>
+                            <p class="competence">
+                                PHPUnit est un framework open source de tests unitaires dédié au langage de programmation PHP.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="valuable-services-item mb-50">
+                        <div class="valuable-services-item-icon valuable-services-item-bg-seven">
+                            <img src="{{asset('assets/img/logo/blackfire.png')}}" alt='logo-blackfire'>
+                        </div>
+                        <div class="valuable-services-item-text">
+                            <h6 class="competence">Blackfire</h6>
+                            <p class="competence">
+                                Blackfire est un outil permettant d'analyser les performances d'une application PHP.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="valuable-services-item mb-50">
+                        <div class="valuable-services-item-icon valuable-services-item-bg-seven">
+                            <img src="{{asset('assets/img/logo/wordpress.png')}}" alt='logo-wordpress'>
+                        </div>
+                        <div class="valuable-services-item-text">
+                            <h6 class="competence">Wordpress</h6>
+                            <p class="competence">
+                                WordPress est un CMS, open source, 
+                                écrit en PHP est distribué par la fondation WordPress.org.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="valuable-services-item mb-50">
+                        <div class="valuable-services-item-icon valuable-services-item-bg-seven">
+                            <img src="{{asset('assets/img/logo/prestashop.png')}}" alt='logo-prestashop'>
+                        </div>
+                        <div class="valuable-services-item-text">
+                            <h6 class="competence">Prestashop</h6>
+                            <p class="competence">
+                                PrestaShop est une application Web open source permettant de créer 
+                                une boutique en ligne dans le but de réaliser du commerce électronique.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="valuable-services-item mb-50">
+                        <div class="valuable-services-item-icon valuable-services-item-bg-seven">
+                            <img src="{{asset('assets/img/logo/shopify.png')}}" alt='logo-shopify'>
+                        </div>
+                        <div class="valuable-services-item-text">
+                            <h6 class="competence">Shopify</h6>
+                            <p class="competence">
+                                Shopify est une plate-forme de commerce électronique 
+                                permettant la création et la gestion de boutique en ligne.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="valuable-services-item mb-50">
+                        <div class="valuable-services-item-icon">
+                            <img src="{{asset('assets/img/logo/mysql.png')}}" alt='logo-mysql'>
+                        </div>
+                        <div class="valuable-services-item-text">
+                            <h6 class="competence">Mysql</h6>
+                            <p class="competence">
+                                MySQL est un système de gestion de bases de données relationnelles. 
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="valuable-services-item">
+                        <div class="valuable-services-item-icon">
+                            <img src="{{asset('assets/img/logo/git.png')}}" alt='logo-git'>
+                        </div>
+                        <div class="valuable-services-item-text">
+                            <h6 class="competence">Git</h6>
+                            <p class="competence">
+                                Git est un logiciel qui permet
+                                de sauvegarder et répertorier 
+                                plusieurs version de son code.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="valuable-services-item">
+                        <div class="valuable-services-item-icon">
+                            <img src="{{asset('assets/img/logo/docker.png')}}" alt='logo-docker'>
+                        </div>
+                        <div class="valuable-services-item-text">
+                            <h6 class="competence">Docker</h6>
+                            <p class="competence">
+                                Docker est un logiciel libre permettant de lancer des applications dans des conteneurs logiciels.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="valuable-services-item">
+                        <div class="valuable-services-item-icon">
+                            <img src="{{asset('assets/img/logo/codacy.png')}}" alt='logo-codacy'>
+                        </div>
+                        <div class="valuable-services-item-text">
+                            <h6 class="competence">Codacy</h6>
+                            <p class="competence">
+                                Codacy est un outil qui permet d'analyser son code et qui offre des axes d'amélioration.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--  TESTIMONIAL AREA -->
+    <section class="testimonial-area testimonial04" style="background-image: url(assets/img/testimonial/testimonialbg.png);">
+        <div class="container">
+            <div class="section-title mb-50">
+                <h2 class="mb-20">
+                    Nos prestations
+                </h2>
+            </div>
+            <div class="tstimonial-wrappers">
+                <div class="row testimonial-active">
+                    <div class="col-xl-4 single-slider">
+                        <div class="testimoial-icon">
+                            <img class="logo-img" src="{{asset('assets/img/testimonial//coding.svg')}}" alt="logo" />
+                        </div>
+                        <div class="testimonial-wrappers">
+                            <div class="tesmonial-text">
+                                <h2>Création d'applications.</h2>
+                                <p>La création d'applications web est notre domaine d'expertise. Nous sommes en mesure
+                                    de réaliser tous types d'applications web, notamment via des CMS, ou le langage PHP.
+                                </p>
+                            </div>
+                            <a class="testimonial-icon" href="javascript:void(0)"> <img src="{{asset('assets/img/icon/arrow-right.svg')}}" alt="icon" /> </a>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 single-slider">
+                        <div class="testimoial-icon">
+                            <img class="logo-img" src="{{asset('assets/img/testimonial/ux.svg')}}" alt="logo" />
+                        </div>
+                        <div class="testimonial-wrappers">
+                            <div class="tesmonial-text">
+                                <h2>Création d'Api</h2>
+                                <p>Nous disposons aussi des compétences nécessaires pour réaliser des API Rest robustes 
+                                grâce au Framework Symfony 5 et à Api Platform</p>
+                            </div>
+                            <a class="testimonial-icon" href="javascript:void(0)"> <img src="{{asset('assets/img/icon/arrow-right.svg')}}" alt="icon" /> </a>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 single-slider">
+                        <div class="testimoial-icon">
+                            <img class="logo-img" src="{{asset('assets/img/testimonial/layers.svg')}}" alt="logo"/>
+                        </div>
+                        <div class="testimonial-wrappers">
+                            <div class="tesmonial-text">
+                                <h2>Intégration d'api</h2>
+                                <p>Vous souhaitez intégrer une API dans votre application? Confiez nous votre projet, 
+                                nous avons les ressources nécessaires pour mener à bon terme ce type d'ouvrage.</p>
+                            </div>
+                            <a class="testimonial-icon" href="javascript:void(0)"> <img src="{{asset('assets/img/icon/arrow-right.svg')}}" alt="icon" /> </a>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 single-slider">
+                        <div class="testimoial-icon">
+                            <img class="logo-img" src="{{asset('assets/img/testimonial//coding.svg')}}" alt="logo" />
+                        </div>
+                        <div class="testimonial-wrappers">
+                            <div class="tesmonial-text">
+                                <h2>Refonte de sites web</h2>
+                                <p>
+                                La refonte d'une application web peut s'avérer être une tâche fastidieuse, 
+                                mais il s'agit aussi d'une de nos spécialités, que nous mettrons volontiers à votre service.
+                                </p>
+                            </div>
+                            <a class="testimonial-icon" href="javascript:void(0)"> <img src="{{asset('assets/img/icon/arrow-right.svg')}}" alt="icon" /> </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--  Projects Slider Area -->
+    <section class="projectSlider" id="projectSlider">
+        <div class="container">
+            <div class="section-title text-center">
+                <h2>Our last project</span></h2>
+            </div>
+            <div class="row">
+                <div class="col-lg-5 order-2 order-lg-0">
+                    <div class="projectSlider__leftContent">
+                        <h5 class="projectSlider__subTitle">Réalisé avec PHP/SYMFONY 5 et Javascript.</h5>
+                        <h2 class="projectSlider__ContentTitle">Medical Website Design</h2>
+                        <p class="projectSlider__textContents">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis risus purus. Maecenas libero velit, lacinia cursus cursus mattis, interdum vehicula arcu. Duis erat justo, tincidunt et tristique ut,
+                            consequat eget lectus. Cras tincidunt dictum erat, at dignissim leo fringilla eu. Donec sit amet. <br />
+                            <br />
+                            Interdum vehicula arcu. Duis erat justo, tincidunt et tristique ut, consequat eget lectus. Cras tincidunt dictum erat, at dignissim leo fringilla eu.
+                        </p>
+                        <div class="projectSlider__buttons">
+                            <a class="primary__button primary__button-bgPrimary" href="javascript:void(0)">Live Preview</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7 order-1 order-lg-0">
+                    <div class="swiper-container projectSlider__container">
+                        <div class="swiper-wrapper projectSlider__wrapper">
+                            <div class="swiper-slide projectSlider__slide">
+                                <img src="assets/img/blog/article01.jpg" alt="ProjectSlider" class="projectSlider__slideImg img-fluid" />
+                            </div>
+                            <div class="swiper-slide projectSlider__slide">
+                                <img src="assets/img/blog/article02.jpg" alt="ProjectSlider" class="projectSlider__slideImg img-fluid" />
+                            </div>
+                            <div class="swiper-slide projectSlider__slide">
+                                <img src="assets/img/blog/article03.jpg" alt="ProjectSlider" class="projectSlider__slideImg img-fluid" />
+                            </div>
+                            <div class="swiper-slide projectSlider__slide">
+                                <img src="assets/img/blog/article01.jpg" alt="ProjectSlider" class="projectSlider__slideImg img-fluid" />
+                            </div>
+                            <div class="swiper-slide projectSlider__slide">
+                                <img src="assets/img/blog/article02.jpg" alt="ProjectSlider" class="projectSlider__slideImg img-fluid" />
+                            </div>
+                            <div class="swiper-slide projectSlider__slide">
+                                <img src="assets/img/blog/article03.jpg" alt="ProjectSlider" class="projectSlider__slideImg img-fluid" />
+                            </div>
+                        </div>
+                        <!-- Add Pagination -->
+                        <div class="swiper-pagination projectSlider__pagination"></div>
+                        <!-- Add Arrows -->
+                        <div class="swiper-button-next projectSlider__next">
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                        <div class="swiper-button-prev projectSlider__prev">
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--  CLIENT REVIEW TESTIMONIAL AREA -->
+    <section class="client-review" style="background-image: url(assets/img/client-review/review.png);">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5 col-sm-12">
+                    <div class="banner-image">
+                        <img src="assets/img/client-review/Image.png" alt="image" />
+                    </div>
+                </div>
+                <div class="col-lg-7 col-sm-12 pl-45">
+                    <div class="section-title">
+                        <h2>Our <span>CLIENT</span> SAYING</h2>
+                    </div>
+                    <div class="review-active mb-30">
+                        <div class="single-testimonial">
+                            <p>
+                                Duis id nisl dignissim, pretium nisi non, posuere leo. Cras varius nec enim vitae rutrum. Morbi id tempor tellus. Phasellus ultrices feugiat euismod. Aenean efficitur eros in lobortis pretium. In
+                                bibendum, eros eget pellentesque facilisis, massa arcu sollicitudin sem, eleifend eleifen.
+                            </p>
+                            <div class="client-name">
+                                <h3>Partho Halder</h3>
+                                <p>Fornt-end Developer</p>
+                            </div>
+                        </div>
+                        <div class="single-testimonial">
+                            <p>
+                                Duis id nisl dignissim, pretium nisi non, posuere leo. Cras varius nec enim vitae rutrum. Morbi id tempor tellus. Phasellus ultrices feugiat euismod. Aenean efficitur eros in lobortis pretium. In
+                                bibendum, eros eget pellentesque facilisis, massa arcu sollicitudin sem, eleifend eleifen.
+                            </p>
+                            <div class="client-name">
+                                <h3>Kyrull Shanto</h3>
+                                <p>Developer</p>
+                            </div>
+                        </div>
+                        <div class="single-testimonial">
+                            <p>
+                                Duis id nisl dignissim, pretium nisi non, posuere leo. Cras varius nec enim vitae rutrum. Morbi id tempor tellus. Phasellus ultrices feugiat euismod. Aenean efficitur eros in lobortis pretium. In
+                                bibendum, eros eget pellentesque facilisis, massa arcu sollicitudin sem, eleifend eleifen.
+                            </p>
+                            <div class="client-name">
+                                <h3>Zakir Hossen</h3>
+                                <p>Project Menager</p>
+                            </div>
+                        </div>
+                        <div class="single-testimonial">
+                            <p>
+                                Duis id nisl dignissim, pretium nisi non, posuere leo. Cras varius nec enim vitae rutrum. Morbi id tempor tellus. Phasellus ultrices feugiat euismod. Aenean efficitur eros in lobortis pretium. In
+                                bibendum, eros eget pellentesque facilisis, massa arcu sollicitudin sem, eleifend eleifen.
+                            </p>
+                            <div class="client-name">
+                                <h3>MARK SK PARKER</h3>
+                                <p>UX/UI Designer</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="client-review__quotes">
+                <img src="assets/img/mask/Quotation.png" alt="quotation mark" />
+            </div>
+        </div>
+    </section>
+    <section class="contactArea">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="contactArea__title section-title mb-0">
+                        <h2><span>WHAT’S </span> up?</h2>
+                    </div>
+                    <p class="contactArea__brief">
+                        Tell us about your product concept and we’ll get back to you with details on how we can make this work....
+                    </p>
+                    <form>
+                        <div class="form-group">
+                            <!-- <label for="yourName">Your Name</label> -->
+                            <input type="text" class="form-control" id="yourName" placeholder="Your Name" />
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" id="yourEmail" placeholder="Your Email" />
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" id="message" placeholder="Write Message"></textarea>
+                        </div>
+                    </form>
+                    <button class="contactArea__button primary__button primary__button-bgPrimary border-0">
+                        Get in Touch
+                    </button>
+                </div>
+                <div class="col-lg-8">
+                    <div class="contactArea__location">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.2856179753835!2d90.35246366544418!3d23.77284149383456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c0bcdf50fd59%3A0x9ab0a63bb3267107!2sAdabar%2C%20Dhaka!5e0!3m2!1sen!2sbd!4v1618476156696!5m2!1sen!2sbd"
+                            width="800"
+                            height="600"
+                            style="border: 0;"
+                            loading="lazy"
+                        ></iframe>
+                        <div class="contactArea__info">
+                            <span>info@email.com</span>
+                            <span>+21212345678</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+{% endblock %}
