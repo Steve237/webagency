@@ -51,24 +51,14 @@
             <nav class="menu-area d-flex align-items-center">
                 <div class="logo">
                     <a href="{{path('home')}}">
-                        <h3 style="color:white;">Programerz</h3>
+                        <h3 class="website-title">Programerz</h3>
                     </a>
                 </div>
                 <ul class="main-menu d-flex align-items-center">
                     <li>
-                        <a class="active" href="javascript:void(0)">Home</a>
-                        <ul class="sub-menu">
-                            <li><a href="index.html">Home Style 1</a></li>
-                            <li>
-                                <a href="home-2.html">Home Style 2</a>
-                            </li>
-                            <li>
-                                <a href="home-3.html">Home Style 3</a>
-                            </li>
-                            <li>
-                                <a href="home-4.html">Home Style 4</a>
-                            </li>
-                        </ul>
+                        <a href{{path('home')}} class="active" href="javascript:void(0)">
+                            Home
+                        </a>
                     </li>
                     <li>
                         <a href="javascript:void(0)">Services</a>
