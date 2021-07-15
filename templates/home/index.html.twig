@@ -413,30 +413,40 @@
     </section>
 
     <section class="contactArea">
-        <div class="container">
+        <div class="container" id="contact-form">
             <div class="row">
                 <div class="col-lg-4">
+                    {% for message in app.flashes('success-message') %}
+                        <div class="alert alert-success">
+                            {{ message }}
+                        </div>
+                    {% endfor %}
                     <div class="contactArea__title section-title mb-0">
-                        <h2><span>WHAT’S </span> up?</h2>
+                        <h2>
+                            <span>
+                               Une question?
+                            </span>
+                        </h2>
                     </div>
                     <p class="contactArea__brief">
-                        Tell us about your product concept and we’ll get back to you with details on how we can make this work....
+                       Merci de nous contacter
                     </p>
-                    <form>
+                    {% set action = path('home') ~ '#contact-form' %}
+                    {{form_start(form, {'action': action, 'method': 'POST'})}}
                         <div class="form-group">
                             <!-- <label for="yourName">Your Name</label> -->
-                            <input type="text" class="form-control" id="yourName" placeholder="Your Name" />
+                            {{form_row(form.name)}}
                         </div>
                         <div class="form-group">
-                            <input type="email" class="form-control" id="yourEmail" placeholder="Your Email" />
+                            {{form_row(form.email)}}
                         </div>
                         <div class="form-group">
-                            <textarea class="form-control" id="message" placeholder="Write Message"></textarea>
+                            {{form_row(form.message)}}
                         </div>
-                    </form>
-                    <button class="contactArea__button primary__button primary__button-bgPrimary border-0">
-                        Get in Touch
-                    </button>
+                        <button type="submit" class="contactArea__button primary__button primary__button-bgPrimary border-0">
+                            Envoyer
+                        </button>
+                    {{form_end(form)}}
                 </div>
             </div>
         </div>
