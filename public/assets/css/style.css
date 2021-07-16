@@ -9747,7 +9747,7 @@ aside,
 .conatact-area {
   padding-top: 60px;
   padding-bottom: 50px;
-  margin-bottom: 80px;
+  margin-top: -600px;
 }
 
 .conatact-area .section-title {
@@ -11620,10 +11620,16 @@ aside,
 }
 
 
-/* page service */
+/* page service and contact */
 
-.services-pages {
+.background-color {
 
   background-color:#212529;
+
+}
+
+.navbar-banner {
+
+margin-top: 150px;
 
 }
