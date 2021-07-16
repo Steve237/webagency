@@ -56,18 +56,14 @@
                 </div>
                 <ul class="main-menu d-flex align-items-center">
                     <li>
-                        <a href{{path('home')}} class="active" href="javascript:void(0)">
+                        <a href="{{path('home')}}" class="active">
                             Home
                         </a>
                     </li>
                     <li>
-                        <a href="javascript:void(0)">Services</a>
-                        <ul class="sub-menu">
-                            <li><a href="services.html">Services</a></li>
-                            <li>
-                                <a href="service-details.html">Services Details</a>
-                            </li>
-                        </ul>
+                        <a href="{{path('services')}}">
+                            Services
+                        </a>
                     </li>
                     <li>
                         <a href="javascript:void(0)">About Us</a>
@@ -95,7 +91,7 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="contact.html">Contact Us</a>
+                        <a href="{{path('contact')}}">Contact Us</a>
                     </li>
                 </ul>
                 <div class="right-content ml-auto">
