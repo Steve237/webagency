@@ -13,7 +13,7 @@ class PageAboutController extends AbstractController
      */
     public function index(): Response
     {
-        return $this->render('page_about/index.html.twig', [
+        return $this->render('page_about/about.html.twig', [
             'controller_name' => 'PageAboutController',
         ]);
     }

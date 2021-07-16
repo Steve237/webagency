@@ -1,0 +1,309 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}About{% endblock %}
+
+{% block body %}
+<main class="background-color">
+    <!--  BREADCRUMB AREA -->
+    <section class="banner-area breadcrumArea banner__About">
+        <div class="container custom-container">
+          <div style="background-image: url(assets/img/mask/breadcrumbmask.png);" class="breadcrum-banner">
+              <div class="row d-flex align-items-center">
+                  <div class="col-lg-6 order-2 order-lg-1">
+                      <div class="bannerArea__wrapper navbar-banner">
+                          <div class="bannerArea__title">
+                              <h3>A propos</h3>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-lg-6 order-1 order-lg-2 navbar-banner">
+                      <div class="banner-image">
+                          <img src="assets/img/banner/breadcrumb-banner.png" alt="banner-image" class="img-fluid" />
+                      </div>
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="col-sm-12">
+                      <div class="breadcrumb-wrapper">
+                          <nav aria-label="breadcrumb">
+                              <ol class="breadcrumb">
+                                  <li class="breadcrumb-item"><a href="{{path('home')}}">Home</a></li>
+                                  <li class="breadcrumb-item active" aria-current="page">About Us</li>
+                              </ol>
+                          </nav>
+                      </div>
+                  </div>
+              </div>
+              <div class="breadcrumbmask">
+                  <img class="mask1" src="assets/img/mask/layerShape-02.png" alt="mask" />
+              </div>
+            </div>
+        </div>
+    </section>
+ 
+    <!--  ABOUT US -->
+    <section class="about-us">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="about-us-image">
+                        <div class="image">
+                            <img src="assets/img/about/aboutus.png" alt="Image" class="img-fluid" />
+                        </div>
+                        <div class="small-feature sm-feauter-top" style="background-color: #fab005;">
+                            <div class="small-feature-item">
+                                Conception d'applications web.
+                            </div>
+                        </div>
+                        <div class="small-feature sm-feauter-left" style="background-color: #4dadf7;">
+                            <div class="small-feature-item">
+                                Conception d'applications mobiles.
+                            </div>
+                        </div>
+                        <div class="small-feature sm-feauter-bottom" style="background-color: #5746ff;">
+                            <div class="small-feature-item">
+                                Conception et intégration d'API.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="about-us-text">
+                        <div class="sub-heading">
+                            <h2>Qui sommes nous?</h2>
+                            <p>
+                                Programerz est une société de programmation dont l'activité consiste à réaliser des applications webs ou mobiles,
+                                ainsi que des logiciels, aussi bien pour les entreprises que pour les particuliers. 
+                            </p>
+                            </br>
+                            <p>
+                                Nous proposons des tarifs adaptés aux budgets de nos clients, mais fournissons aussi un travail d'excellente qualité, notamment grâce à notre maîtrise
+                                des principaux langages de programmation pour la conception d'applications web, à notre bonne organisation, et à notre détermination à concevoir 
+                                des produits numériques absolument conformes aux projets qui nous sont confiés.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--  ABOUT SOLUTION AREA -->
+    <section class="about-solution d-md-none d-none d-lg-block">
+        <div class="container">
+            <div class="section-title text-center">
+                <h2>Quelles sont les qualités de nos applications?</h2>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="solution-wrapper mb-30">
+                        <div class="solution-title center">
+                            <h4>
+                                <span>01.</span>
+                                Sécurisé.
+                            </h4>
+                            <p>
+                               Nous veillons lors de la conception de nos applications à ce qu'elles soient sécurisés 
+                               contre toutes les failles de sécurité, afin qu'aucune ne puisse faire l'objet d'un piratage informatique.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12">
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="solution-wrapper mb-50">
+                                <div class="solution-title left">
+                                    <h4>
+                                        <span>06.</span>
+                                        Scalable.
+                                    </h4>
+                                    <p>
+                                        Nos applications sont scalables, donc adaptés à l'augmentation du trafic,
+                                        notamment car nous les déployons sur des serveurs appropriés, en fonction du projet.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="solution-wrapper">
+                                <div class="solution-title left">
+                                    <h4>
+                                        <span>05.</span>
+                                        Design de qualité
+                                    </h4>
+                                    <p>
+                                        Le design d'une application est très important, car il réprésente ce que les utilisateurs vont voir. 
+                                        Nous produisons donc des applications élégantes, mais surtout conformes aux exigences de nos clients.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <img src="assets/img/mask/work.png" alt="mask" class="img-fluid" />
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="solution-wrapper mb-50">
+                                <div class="solution-title right">
+                                    <h4>
+                                        <span>02.</span>
+                                        Responsive
+                                    </h4>
+                                    <p>
+                                        Les applications que nous concevons sont responsives, c'est à dire adaptés à tous les écrans,
+                                        afin qu'elles puissent être consultés sur tous les écrans, de smartphones, tablettes, ordinateurs, 
+                                        ou de télévisions.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="solution-wrapper">
+                                <div class="solution-title right">
+                                    <h4>
+                                        <span>03.</span>
+                                       Rapidité et performance.
+                                    </h4>
+                                    <p>
+                                       Nous nous assurons que nos applications soient rapides et performantes, 
+                                       afin que leur utilisation soit la plus agréable possible
+                                       et qu'elle puisse répondre le plus parfaitement à leur but.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12">
+                    <div class="solution-wrapper mt-10">
+                        <div class="solution-title center">
+                            <h4>
+                                <span>04.</span>
+                                Testé.
+                            </h4>
+                            <p>
+                               Nous testons l'ensemble des fonctionnalités de chaque application que nous concevons afin de s'assurer
+                               qu'elles ne rencontrent aucune faille, et que tout fonctionne correctement, afin de livrer aux utilisateurs finaux
+                               un travail parfait.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mask-group">
+                <img class="mask1" src="assets/img/mask/leftMask.svg" alt="mask" />
+                <img class="mask2" src="assets/img/mask/mask8.png" alt="mask" />
+                <img class="mask3" src="assets/img/mask/downShape.svg" alt="mask" />
+            </div>
+        </div>
+    </section>
+    <section class="d-md-block d-block d-lg-none about-solution">
+        <div class="container">
+            <div class="section-title text-center">
+                <h2>Why Should You Work With Us?</h2>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="solution-wrapper mb-30">
+                        <div class="solution-title center">
+                            <h4>
+                                <span>01.</span>
+                                Business Solution
+                            </h4>
+                            <p>Ut id orci ultricies, gravida arcu ac, elementum eros. Curabitur tortor ipsum, imperdiet eget odio ac, faucibus ultricies nisl.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12">
+                    <div class="solution-wrapper mb-30">
+                        <div class="solution-title center">
+                            <h4>
+                                <span>02.</span>
+                                Organization
+                            </h4>
+                            <p>Ut id orci ultricies, gravida arcu ac, elementum eros. Curabitur tortor ipsum, imperdiet eget odio ac, faucibus ultricies nisl.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12">
+                    <div class="solution-wrapper mb-30">
+                        <div class="solution-title center">
+                            <h4>
+                                <span>03.</span>
+                                Business Idea
+                            </h4>
+                            <p>Ut id orci ultricies, gravida arcu ac, elementum eros. Curabitur tortor ipsum, imperdiet eget odio ac, faucibus ultricies nisl.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12">
+                    <div class="solution-wrapper mb-30">
+                        <div class="solution-title center">
+                            <h4>
+                                <span>04.</span>
+                                Improvments
+                            </h4>
+                            <p>Ut id orci ultricies, gravida arcu ac, elementum eros. Curabitur tortor ipsum, imperdiet eget odio ac, faucibus ultricies nisl.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12">
+                    <div class="solution-wrapper mb-30">
+                        <div class="solution-title center">
+                            <h4>
+                                <span>05.</span>
+                                Consultancy
+                            </h4>
+                            <p>Ut id orci ultricies, gravida arcu ac, elementum eros. Curabitur tortor ipsum, imperdiet eget odio ac, faucibus ultricies nisl.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12">
+                    <div class="solution-wrapper">
+                        <div class="solution-title center">
+                            <h4>
+                                <span>06.</span>
+                                Strategy
+                            </h4>
+                            <p>Ut id orci ultricies, gravida arcu ac, elementum eros. Curabitur tortor ipsum, imperdiet eget odio ac, faucibus ultricies nisl.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mask-group">
+            <img class="mask1" src="assets/img/mask/leftMask.svg" alt="mask" />
+            <img class="mask2" src="assets/img/mask/mask8.png" alt="mask" />
+            <img class="mask3" src="assets/img/mask/downShape.svg" alt="mask" />
+        </div>
+    </section>
+ 
+    <!--  WORK SOLUTION AREA -->
+    <section class="about-skill">
+        <div class="container">
+            <div class="row align-items-center align-items-lg-start">
+                <div class="col-lg-7 order-2 order-lg-0">
+                    <div class="about-skill-wrapper">
+                        <div class="about-skill-title">
+                            <h2>Veille technologique permanente</h2>
+                            <p>
+                              Afin de pouvoir concevoir des applications de la meilleure qualité possible, 
+                              mais surtout pouvoir réaliser des applications riches en fonctionnalités, 
+                              nous nous tenons régulièrement informés concernant l'utilisation des langages de programmation, 
+                              et aussi des autres outils nécessaires à la création et à la réussite d'une application. Ainsi, nous 
+                              apprenons sans cesse des nouveautés, ce qui a pour effet de faire augmenter nos compétences.
+                            </p>
+                            </br>
+                            <p>Vous pouvez travailler avec nous en toute confiance, car nous saurons toujours trouver la solution 
+                                approprié pour réaliser vos souhaits.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5 order-1 order-lg-0">
+                    <div class="about-skill-image">
+                        <img src="{{asset('assets/img/banner/knowledge.png')}}" alt="image"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+  
+</main>
+{% endblock %}
