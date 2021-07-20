@@ -48,8 +48,7 @@ class Project
     private $coverimage;
 
     /**
-     * @Vich\UploadableField(mapping="projects_images", fileNameProperty="coverimage")
-     * @var File
+     * @Vich\UploadableField(mapping="project_image", fileNameProperty="coverimage")
      */
     private $imageFile;
 

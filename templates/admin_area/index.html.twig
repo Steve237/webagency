@@ -25,7 +25,7 @@
                 <div class="col-md-6 col-sm-12">
                     <div class="project-wrapper">
                         <div class="project-wrapper-image">
-                            <img src="{{asset('assets/img/project/' ~ project.coverimage)}}" alt="image"/>
+                            <img src="{{asset('assets/img/project/' ~ project.coverimage) | imagine_filter('coverimage')}}" alt="image"/>
                         </div>
                         <div class="project-wrapper-title">
                             <h3 class="project-title">

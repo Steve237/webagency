@@ -5,6 +5,7 @@ namespace App\Form;
 use App\Entity\Project;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
+use Vich\UploaderBundle\Form\Type\VichImageType;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\UrlType;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
@@ -93,7 +94,7 @@ class AddProjectType extends AbstractType
             ])
 
 
-            ->add('imageFile', FileType::class, [
+            ->add('imageFile', VichImageType::class, [
 
                 "label" => false,
 
@@ -104,7 +105,7 @@ class AddProjectType extends AbstractType
 
                 ], 
 
-                "mapped" => false,
+                "data_class" => null,
 
                 "required" => true
 
