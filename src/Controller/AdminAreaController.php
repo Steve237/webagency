@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Entity\Project;
 use App\Form\AddProjectType;
 use App\Repository\ProjectRepository;
+use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -28,7 +29,7 @@ class AdminAreaController extends AbstractController
     }
 
     /**
-     * @Route("/add-project", name="add-project")
+     * @Route("/admin/add-project", name="add-project")
      */
     public function addProject(Request $request, EntityManagerInterface $entity): Response
     {   
@@ -54,5 +55,21 @@ class AdminAreaController extends AbstractController
             
             "form" => $form->createView()
         ]);
+    }
+
+
+     /**
+     * @Route("/admin/delete-project/{id}", name="delete-project")
+     */
+    public function deleteProject(Project $project, EntityManagerInterface $entity) {
+
+        
+        $entity->remove($project);
+        $entity->flush();
+
+        $this->addFlash('success', 'Votre projet a bien été supprimé du portfolio');
+
+        return $this->redirectToRoute('admin_area');
+
     }
 }

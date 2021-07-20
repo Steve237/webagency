@@ -11665,3 +11665,58 @@ width:100%;
 
 
 }
+
+.main-content {
+
+  margin-top:150px;
+
+}
+
+/*  Page détail projet */
+
+.projet-description {
+
+  margin-bottom:200px;
+
+}
+
+/*  Page admin liste des projets */
+
+.button-add {
+
+  margin-bottom:50px;
+
+}
+
+.coverimage {
+
+  margin-bottom:50px;
+
+}
+
+.short-description {
+
+  color:white;
+
+}
+
+
+.title-project {
+
+color:white;
+
+}
+
+.duration {
+
+color:white;
+
+}
+
+.no-project {
+
+  color:white;
+  
+}
+  
+

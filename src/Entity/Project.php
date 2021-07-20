@@ -33,7 +33,7 @@ class Project
     private $client;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255, nullable="true")
      */
     private $duration;
 
@@ -138,7 +138,7 @@ class Project
         return $this->coverimage;
     }
 
-    public function setCoverimage(string $coverimage): self
+    public function setCoverimage($coverimage): self
     {
         $this->coverimage = $coverimage;
 
