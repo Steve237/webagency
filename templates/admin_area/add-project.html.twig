@@ -1,0 +1,70 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Contact{% endblock %}
+
+{% block body %}
+<main class="background-color">
+    <!--  MAP AREA -->
+    <div class="map-area">
+        <div class="container">
+            <div class="map">
+                <div id="map"></div>
+            </div>
+        </div>
+    </div>
+
+    <section class="conatact-area">
+        <div class="container conatact-area__container">
+            <div class="section-title text-center">
+                <h4>Ajoutez un projet</h4>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="contact-form">
+                        {{form_start(form)}}
+                            <div class="form-row conatact-area__formRow">
+                                <div class="col-12 col-md-6 col-lg-6">
+                                    {{form_row(form.title)}}
+                                    <i class="icon fas fa-user"></i>
+                                </div>
+                                <div class="col-12 col-md-6 col-lg-6">
+                                    {{form_row(form.client)}}
+                                    <i class="icon fas fa-wallet"></i>
+                                </div>
+                            </div>
+                            <div class="form-row conatact-area__formRow">
+                                <div class="col-12 col-md-6 col-lg-6">
+                                    {{form_row(form.duration)}}
+                                    <i class="icon fas fa-clock"></i>
+                                </div>
+                                <div class="col-12 col-md-6 col-lg-6">
+                                    {{form_row(form.url)}}
+                                    <i class="icon fas fa-phone-alt"></i>
+                                </div>
+                            </div>
+                            <div class="form-row conatact-area__formRow">
+                                <div class="col-12 col-md-6 col-lg-6">
+                                    {{form_row(form.imageFile)}}
+                                </div>
+                                <div class="col-12 col-md-6 col-lg-6">
+                                    {{form_row(form.videolink)}}
+                                    <i class="icon fas fa-play"></i>
+                                </div>
+                            </div>
+                            <div class="form-message conatact-area__formRow">
+                                {{form_row(form.description)}}
+                                <div class="icon">
+                                    <i class="fas fa-pen"></i>
+                                </div>
+                            </div>
+                            <button type="submit" class="primary__button primary__button-bgPrimary shadow">
+                                Send Message
+                            </button>
+                        {{form_end(form)}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+{% endblock %}

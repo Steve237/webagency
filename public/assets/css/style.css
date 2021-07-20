@@ -9747,7 +9747,7 @@ aside,
 .conatact-area {
   padding-top: 60px;
   padding-bottom: 50px;
-  margin-bottom: 80px;
+  margin-top: -600px;
 }
 
 .conatact-area .section-title {
@@ -11606,3 +11606,117 @@ aside,
 
   color:white;
 }
+
+.website-title {
+
+  color:white;
+
+}
+
+.mainsection {
+
+  height:100vh;
+
+}
+
+
+/* page service and contact */
+
+.background-color {
+
+  background-color:#212529;
+
+}
+
+.navbar-banner {
+
+margin-top: 150px;
+
+}
+
+.input-width {
+
+width:100%;
+
+
+}
+
+/* page about */
+
+.knowledge-image {
+
+  margin-top:30px;
+
+}
+
+
+.login-form {
+
+  height:550px;
+  margin-top:350px;
+  width:650px;
+  padding:20px;
+
+}
+
+.loginform-title {
+
+  color:white;
+
+
+}
+
+.main-content {
+
+  margin-top:150px;
+
+}
+
+/*  Page détail projet */
+
+.projet-description {
+
+  margin-bottom:200px;
+
+}
+
+/*  Page admin liste des projets */
+
+.button-add {
+
+  margin-bottom:50px;
+
+}
+
+.coverimage {
+
+  margin-bottom:50px;
+
+}
+
+.short-description {
+
+  color:white;
+
+}
+
+
+.title-project {
+
+color:white;
+
+}
+
+.duration {
+
+color:white;
+
+}
+
+.no-project {
+
+  color:white;
+  
+}
+  
+

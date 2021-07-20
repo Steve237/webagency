@@ -41,7 +41,7 @@
                 -webkit-align-items: center;
                 align-items: center;
             }
-        </style>
+      </style>
 
     {% endblock %}
 </head>
@@ -51,61 +51,28 @@
             <nav class="menu-area d-flex align-items-center">
                 <div class="logo">
                     <a href="{{path('home')}}">
-                        <h3 style="color:white;">Programerz</h3>
+                        <h3 class="website-title">Programerz</h3>
                     </a>
                 </div>
                 <ul class="main-menu d-flex align-items-center">
                     <li>
-                        <a class="active" href="javascript:void(0)">Home</a>
-                        <ul class="sub-menu">
-                            <li><a href="index.html">Home Style 1</a></li>
-                            <li>
-                                <a href="home-2.html">Home Style 2</a>
-                            </li>
-                            <li>
-                                <a href="home-3.html">Home Style 3</a>
-                            </li>
-                            <li>
-                                <a href="home-4.html">Home Style 4</a>
-                            </li>
-                        </ul>
+                        <a href="{{path('home')}}" class="active">
+                            Home
+                        </a>
                     </li>
                     <li>
-                        <a href="javascript:void(0)">Services</a>
-                        <ul class="sub-menu">
-                            <li><a href="services.html">Services</a></li>
-                            <li>
-                                <a href="service-details.html">Services Details</a>
-                            </li>
-                        </ul>
+                        <a href="{{path('services')}}">
+                            Services
+                        </a>
                     </li>
                     <li>
-                        <a href="javascript:void(0)">About Us</a>
-                        <ul class="sub-menu">
-                            <li><a href="about-us.html">About Us</a></li>
-                            <li><a href="team.html">Team Members</a></li>
-                        </ul>
+                        <a href="{{path('about-us')}}">About Us</a>
                     </li>
                     <li>
-                        <a href="javascript:void(0)">Portfolio</a>
-                        <ul class="sub-menu">
-                            <li><a href="project.html">Project</a></li>
-                            <li>
-                                <a href="project-details.html">Project Detail</a>
-                            </li>
-                        </ul>
+                        <a href="{{path('portfolio')}}">Portfolio</a>
                     </li>
                     <li>
-                        <a href="javascript:void(0)">Blog</a>
-                        <ul class="sub-menu">
-                            <li><a href="blog.html">Blog</a></li>
-                            <li>
-                                <a href="blog-details.html">Blog Details</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="contact.html">Contact Us</a>
+                        <a href="{{path('contact')}}">Contact Us</a>
                     </li>
                 </ul>
                 <div class="right-content ml-auto">
@@ -188,48 +155,7 @@
                                     <a href="contact.html">Contact us</a>
                                 </li>
                                 <li>
-                                    <a href="javascript:void(0)">Careers</a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0)">Press</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 mr-lg-65 col-md-4 col-6 order-lg-0 order-2">
-                        <div class="footer-area-lists mb-30">
-                            <h4>Products</h4>
-                            <ul>
-                                <li>
-                                    <a href="javascript:void(0)">Features</a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0)">Pricing</a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0)">News</a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0)">Help desk</a>
-                                </li>
-                                <li>
-                                    <a href="contact.html">Support</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-4 col-6 order-lg-0 order-md-3">
-                        <div class="footer-area-lists">
-                            <h4>Legal</h4>
-                            <ul>
-                                <li>
-                                    <a href="javascript:void(0)">Privacy Policy</a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0)">Terms & Conditions</a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0)">Return Policy</a>
+                                    <a href="{{path('app_login')}}">Espace administrateur</a>
                                 </li>
                             </ul>
                         </div>
@@ -248,19 +174,14 @@
                 <div class="row align-items-center copyright-area">
                     <div class="col-lg-5 col-md-4 col-sm-12">
                         <div class="copyright-area-text">
-                            <p>Copyright 2020. All Rights Reserved by us!</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-4 col-sm-12">
-                        <div class="copyright-area-logo">
-                            <a href="index.html">
-                                <img src="{{asset('assets/img/logo/logo.png')}}" alt="logo" class="img-fluid" />
-                            </a>
+                            <p>Programerz | Copyright {{ "now"|date("Y") }}. All Rights Reserved.</p>
                         </div>
                     </div>
                     <div class="col-lg-5 col-md-4 col-sm-12">
                         <div class="copyright-area-top text-lg-right">
-                            <a href="#header" id="to-top">Back to Top <i class="fas fa-angle-up"></i></a>
+                            <a href="#header" id="to-top">
+                                Back to Top <i class="fas fa-angle-up"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
