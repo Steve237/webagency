@@ -49,7 +49,7 @@ class SubmitProjectType extends AbstractType
             "attr" => [
 
                 "class" => "form-control input-width",
-                "placeholder" => "Veuillez entrer votre message",
+                "placeholder" => "Veuillez nous décrire votre projet",
                 "cols" => 30,
                 "rows" => 10,
                 "require" => true
