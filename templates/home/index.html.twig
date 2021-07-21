@@ -364,15 +364,22 @@
                 <h3 class="title-project last-project-title">
                     {{project[0].title}}
                 </h3>
-                <div>
-                    <img src="{{asset('assets/img/project/' ~ project[0].coverimage) | imagine_filter('coverimage')}}">
-                </div>
+                
+                <a href="{{path('project', {'id': project[0].id})}}">
+                    <div>
+                        <img src="{{asset('assets/img/project/' ~ project[0].coverimage) | imagine_filter('coverimage')}}">
+                    </div>
+                </a>
+                
                 <div class="last-project-shortdescription">
                     {{project[0].shortdescription}}
                 </div>
-                <button class="btn btn-danger show-project-btn">
-                    <i class="fa fa-eye"></i>
-                </button>
+                
+                <a href="{{path('project', {'id': project[0].id})}}">
+                    <button class="btn btn-danger show-project-btn">
+                        <i class="fa fa-eye"></i>
+                    </button>
+                </a>
             </div>
         </div>
     </section>
