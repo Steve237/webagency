@@ -115,13 +115,12 @@ class AdminAreaController extends AbstractController
     }
 
 
-     /**
+    /**
       * Permet de supprimer un projet
      * @Route("/admin/delete-project/{id}", name="delete-project")
      */
     public function deleteProject(Project $project, EntityManagerInterface $entity) {
 
-        
         $entity->remove($project);
         $entity->flush();
 
@@ -130,4 +129,10 @@ class AdminAreaController extends AbstractController
         return $this->redirectToRoute('admin_area');
 
     }
+
+
+
+
+
+
 }

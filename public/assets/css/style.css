@@ -11674,9 +11674,36 @@ width:100%;
 
 /*  Page détail projet */
 
-.projet-description {
+.project-content {
 
-  margin-bottom:200px;
+  margin-bottom:100px;
+
+}
+
+.project-presentation {
+
+  color:white;
+
+}
+
+.project-image-section {
+
+  border:1px solid red;
+  background-color:brown;
+  padding:10px;
+
+}
+
+.project-image {
+
+  max-width:500px;
+  min-width:500px;
+  margin:auto;
+}
+
+.project-details {
+
+  margin-top:50px;
 
 }
 
