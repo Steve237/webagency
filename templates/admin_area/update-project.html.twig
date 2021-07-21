@@ -12,11 +12,16 @@
             </div>
         </div>
     </div>
-
+    
     <section class="conatact-area">
         <div class="container conatact-area__container">
+            {% for message in app.flashes('invalid-image') %}
+            <div class="alert alert-danger">
+                {{message}}
+            </div>
+            {% endfor %}
             <div class="section-title text-center">
-                <h4>Ajoutez un projet</h4>
+                <h4>Modifiez un projet</h4>
             </div>
             <div class="row">
                 <div class="col-sm-12">
@@ -44,7 +49,7 @@
                             </div>
                             <div class="form-row conatact-area__formRow">
                                 <div class="col-12 col-md-6 col-lg-6">
-                                    {{form_row(form.imageFile, {'attr': {'required' : true}})}}
+                                    {{form_row(form.image)}}
                                 </div>
                                 <div class="col-12 col-md-6 col-lg-6">
                                     {{form_row(form.videolink)}}

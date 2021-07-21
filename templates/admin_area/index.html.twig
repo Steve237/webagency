@@ -88,14 +88,16 @@
                                 </p>
                             </div>
                             <div class="project-wrapper-button">
-                                <a href="{{path('project', {'slug': project.slug})}}">
+                                <a href="{{path('project', {'id': project.id})}}">
                                     <button class="btn btn-primary">
                                         Voir
                                     </button>
-                            </a>
-                            <button class="btn btn-primary">
-                                    Modifier
-                                </button>
+                                </a>
+                                <a href="{{path('update-project', {'id': project.id})}}">
+                                    <button class="btn btn-primary">
+                                        Modifier
+                                    </button>
+                                </a>
                                 <a href="{{path('delete-project', {'id': project.id})}}">
                                     <button class="btn btn-primary">
                                         Supprimer

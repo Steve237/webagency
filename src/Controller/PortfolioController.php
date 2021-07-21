@@ -22,7 +22,7 @@ class PortfolioController extends AbstractController
 
 
     /**
-     * @Route("/project/{slug}", name="project")
+     * @Route("/project/{id}", name="project")
      */
     public function detailsProjets(Project $project): Response
     {
