@@ -11619,6 +11619,21 @@ aside,
 
 }
 
+.last-project-shortdescription {
+  
+  color:white;
+  max-width:500px;
+  margin:auto;
+  margin-top:5px;
+
+}
+
+.show-project-btn {
+
+  margin-top:20px;
+
+}
+
 
 /* page service and contact */
 
@@ -11752,4 +11767,7 @@ color:white;
   
 }
   
+
+
+
 
