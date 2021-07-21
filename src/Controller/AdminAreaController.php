@@ -23,7 +23,7 @@ class AdminAreaController extends AbstractController
     {
         $projects = $repoProject->findAll();
 
-        return $this->render('admin_area/index.html.twig', [
+        return $this->render('portfolio/portfolio.html.twig', [
             
             "projects" => $projects
 

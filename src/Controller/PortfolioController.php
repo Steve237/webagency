@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Entity\Project;
+use App\Repository\ProjectRepository;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -12,11 +13,13 @@ class PortfolioController extends AbstractController
     /**
      * @Route("/portfolio", name="portfolio")
      */
-    public function index(): Response
+    public function index(ProjectRepository $projectRepo): Response
     {
+        $projects = $projectRepo->findAll();
 
         return $this->render('portfolio/portfolio.html.twig', [
-            'controller_name' => 'PortfolioController',
+            
+            "projects" => $projects
         ]);
     }
 
