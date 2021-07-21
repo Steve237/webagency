@@ -11624,7 +11624,13 @@ aside,
   color:white;
   max-width:500px;
   margin:auto;
-  margin-top:5px;
+  margin-top:15px;
+
+}
+
+.last-project-title {
+
+  margin-bottom:10px;
 
 }
 
@@ -11754,6 +11760,7 @@ width:100%;
 color:white;
 
 }
+
 
 .duration {
 

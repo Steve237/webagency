@@ -357,13 +357,18 @@
     <section class="projectSlider" id="projectSlider">
         <div class="container">
             <div class="section-title text-center">
-                <h2>Notre dernier projet</span></h2>
-
-                <h3 class="title-project">Mooviz</h3>
+                <h2>
+                    <span>Notre dernier projet</span>
+                </h2>
+                
+                <h3 class="title-project last-project-title">
+                    {{project[0].title}}
+                </h3>
+                <div>
+                    <img src="{{asset('assets/img/project/' ~ project[0].coverimage) | imagine_filter('coverimage')}}">
+                </div>
                 <div class="last-project-shortdescription">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea totam temporibus 
-                    aliquid quidem, blanditiis, odio dolorem fuga deleniti iusto soluta dolores 
-                    consequatur earum error architecto, tenetur quis reiciendis quo repellat.
+                    {{project[0].shortdescription}}
                 </div>
                 <button class="btn btn-danger show-project-btn">
                     <i class="fa fa-eye"></i>
@@ -371,7 +376,6 @@
             </div>
         </div>
     </section>
-
     <section class="contactArea">
         <div class="container" id="contact-form">
             <div class="row">

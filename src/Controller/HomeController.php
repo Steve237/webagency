@@ -2,7 +2,9 @@
 
 namespace App\Controller;
 
+use App\Entity\Project;
 use App\Form\ContactType;
+use App\Repository\ProjectRepository;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -13,8 +15,10 @@ class HomeController extends AbstractController
     /**
      * @Route("/", name="home")
      */
-    public function index(Request $request, \Swift_Mailer $mailer): Response
+    public function index(Request $request, \Swift_Mailer $mailer, ProjectRepository $projectRepo): Response
     {
+
+        $project = $projectRepo->findLastProject();
 
         $form = $this->createForm(ContactType::class);
         $form->handleRequest($request);
@@ -46,7 +50,10 @@ class HomeController extends AbstractController
         
         return $this->render('home/index.html.twig', [
             
-        "form" => $form->createView()
+            "form" => $form->createView(),
+            "project" => $project
+        
+        
         ]);
     }
 
