@@ -82,7 +82,24 @@ class UpdateProjectType extends AbstractType
                 "attr" => [
 
                     "class" => "form-control",
-                    "placeholder" => "Décrivez le projet"
+                    "placeholder" => "Description détaillée du projet",
+
+                ], 
+
+                "label" => false,
+
+                "required" => true
+
+            ])
+
+
+            ->add('shortdescription', TextareaType::class, [
+
+
+                "attr" => [
+
+                    "class" => "form-control",
+                    "placeholder" => "Résumé du projet"
 
                 ], 
 
