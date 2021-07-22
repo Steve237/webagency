@@ -54,9 +54,9 @@
                 <div class="row">
                     <div class="col-sm-12 project-description">
                         <center class="project-image-section">
-                            <img class="img-fluid project-image" src="{{asset('assets/img/project/' ~ project.coverimage)}}" alt="image"/>
+                            <img class="img-fluid project-image" src="{{asset('assets/img/project/' ~ project.coverimage) | imagine_filter('coverimage')}}" alt="image"/>
                         </center>
-                        <div class="project-overview-wrapper project-details">
+                        <div class="project-overview-wrapper" id="project-details">
                             <div class="overview-detail">
                                 <div class="detail-tittle">
                                     <p>Client</p>
@@ -83,7 +83,7 @@
                             </div>
                         </div>
                         <div class="project-detail-content mb-40 project-content">
-                            <h2>
+                            <h2 class="project-title">
                                 {{project.title}}
                             </h2>
                             <div class="project-presentation">

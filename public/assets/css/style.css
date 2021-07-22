@@ -11637,6 +11637,12 @@ aside,
 
 }
 
+.project-title {
+
+  color:blue;
+
+}
+
 .show-project-btn {
 
   margin-top:20px;
@@ -11729,14 +11735,12 @@ width:100%;
 
 .project-image {
 
-  max-width:500px;
-  min-width:500px;
   margin:auto;
 }
 
-.project-details {
+#project-details {
 
-  margin-top:50px;
+  margin-top:20px;
 
 }
 
