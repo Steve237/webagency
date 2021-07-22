@@ -68,7 +68,7 @@
                 <div class="row">
                     {% if projects %}
                         {% for project in projects %}
-                            <div class="col-md-6 col-sm-12">
+                            <div class="col-md-6 col-sm-12 col-lg-6 col-6">
                                 <div class="project-wrapper">
                                     <div class="project-wrapper-image coverimage">
                                         <img src="{{asset('assets/img/project/' ~ project.coverimage) | imagine_filter('coverimage')}}" alt="image"/>

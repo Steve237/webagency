@@ -121,6 +121,10 @@ class AdminAreaController extends AbstractController
      */
     public function deleteProject(Project $project, EntityManagerInterface $entity) {
 
+        $coverImage = $project->getCoverimage();
+        $coverPath = 'assets/img/project/'.$coverImage;
+        unlink($coverPath);
+
         $entity->remove($project);
         $entity->flush();
 
@@ -129,10 +133,4 @@ class AdminAreaController extends AbstractController
         return $this->redirectToRoute('admin_area');
 
     }
-
-
-
-
-
-
 }
