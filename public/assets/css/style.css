@@ -11581,6 +11581,9 @@ aside,
 }
 /*# sourceMappingURL=style.css.map */
 
+
+
+
 /* homepage */
 
 .stack-section {
@@ -11637,6 +11640,15 @@ aside,
 .show-project-btn {
 
   margin-top:20px;
+
+}
+
+/* liste des projets */
+
+.description-project {
+
+  height:200px;
+
 
 }
 
