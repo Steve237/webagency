@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>{% block title %}Welcome!{% endblock %}</title>
+    <title>{% block title %}Programerz{% endblock %}</title>
     {# Run `composer require symfony/webpack-encore-bundle`
            and uncomment the following Encore helpers to start using Symfony UX #}
     {% block stylesheets %}
@@ -24,7 +24,9 @@
             <nav class="menu-area d-flex align-items-center">
                 <div class="logo">
                     <a href="{{path('home')}}">
-                        <h3 class="website-title">Programerz</h3>
+                        <h3 class="website-title">
+                            Programerz
+                        </h3>
                     </a>
                 </div>
                 <ul class="main-menu d-flex align-items-center">
@@ -39,14 +41,27 @@
                         </a>
                     </li>
                     <li>
-                        <a href="{{path('about-us')}}">About Us</a>
+                        <a href="{{path('about-us')}}">
+                            About Us
+                        </a>
                     </li>
                     <li>
-                        <a href="{{path('portfolio')}}">Portfolio</a>
+                        <a href="{{path('portfolio')}}">
+                            Portfolio
+                        </a>
                     </li>
                     <li>
-                        <a href="{{path('contact')}}">Contact Us</a>
+                        <a href="{{path('contact')}}">
+                            Contact Us
+                        </a>
                     </li>
+                    {% if app.user %}
+                        <li>
+                            <a href="{{path('app_logout')}}">
+                                Logout
+                            </a>
+                        </li>
+                    {% endif %}
                 </ul>
                 <div class="right-content ml-auto">
                     <div class="social-icon">
@@ -82,15 +97,35 @@
                         <li>
                             <a class="active" href="index.html">Home</a>
                         </li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="about-us.html">About Us</a></li>
-                        <li><a href="project.html">Portfolio</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="contact.html">Contact Us</a></li>
+                        <li>
+                            <a href="{{path('services')}}">
+                                Services
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{path('about-us')}}">
+                                About Us
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{path('portfolio')}}">
+                                Portfolio
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{path('contact')}}">
+                                Contact Us
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{path('app_logout')}}">
+                                Logout
+                            </a>
+                        </li>
                     </ul>
-                    <a class="primary__button primary__button-bgBlack contacprimary__button" href="tel:+987 45478 547">
+                    <a class="primary__button primary__button-bgBlack contacprimary__button">
                         <img src="assets/img/logo/phone-alt.svg" alt="phone alt" />
-                        +987 45478 547
+                        0611722099
                     </a>
                 </div>
                 <div class="overlay"></div>
