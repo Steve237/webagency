@@ -66,13 +66,13 @@ class UpdateProjectType extends AbstractType
                 "attr" => [
 
                     "class" => "form-control",
-                    "placeholder" => "Entrez l'url vers l'application (facultatif)"
+                    "placeholder" => "Entrez l'url vers l'application"
 
                 ],
                 
                 "label" => false,
 
-                "required" => false
+                "required" => true
             ])
             
             
