@@ -3,7 +3,7 @@
 {% block title %}Contact{% endblock %}
 
 {% block body %}
-<main class="background-color">
+<main class="background-color main-section">
     <!--  BREADCRUMB AREA -->
     <section class="banner-area breadcrumArea mb-0" >
         <div class="container custom-container">
@@ -17,9 +17,9 @@
                       </div>
                   </div>
                   <div class="col-lg-6 order-1 order-lg-2 navbar-banner">
-                      <div class="banner-image">
-                          <img src="assets/img/banner/breadcrumb-banner.png" alt="banner-image" class="img-fluid" />
-                      </div>
+                    <div class="banner-image">
+                        <img src="{{asset('assets/img/mask/workagence.jpg') | imagine_filter('bannerimage')}}" alt="banner-image" class="img-fluid"/>
+                    </div>
                   </div>
               </div>
               <div class="row">

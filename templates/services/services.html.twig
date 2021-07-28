@@ -1,9 +1,9 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Home{% endblock %}
+{% block title %}Services{% endblock %}
 
 {% block body %}
-    <main class="background-color">
+    <main class="background-color main-section">
         <!--  BREADCRUMB AREA -->
         <section class="banner-area breadcrumArea mb-0">
             <div class="container custom-container">
@@ -20,7 +20,7 @@
                     </div>
                     <div class="col-lg-6 order-1 order-lg-2 navbar-banner">
                         <div class="banner-image">
-                            <img src="assets/img/banner/breadcrumb-banner.png" alt="banner-image" class="img-fluid" />
+                            <img src="{{asset('assets/img/mask/workagence.jpg') | imagine_filter('bannerimage')}}" alt="banner-image" class="img-fluid"/>
                         </div>
                     </div>
                 </div>
@@ -30,7 +30,7 @@
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb">
                                     <li class="breadcrumb-item">
-                                        <a href="index.html">Home</a>
+                                        <a href="{{path('home')}}">Home</a>
                                     </li>
                                     <li class="breadcrumb-item active" aria-current="page">
                                         Services
@@ -50,7 +50,7 @@
         <section class="our-work-process">
             <div class="container">
                 <div class="section-title text-center">
-                    <h2>Processus du travail</h2>
+                    <h3 class="red-text">Processus du travail</h3>
                 </div>
                 <div class="row">
                     <div class="col-lg-4">
@@ -61,8 +61,8 @@
                                 </div>
                             </div>
                             <div class="process-text">
-                                <h3 class="mb-20">Définition du projet</h3>
-                                <p>
+                                <h3 class="mb-20 yellow-text">Définition du projet</h3>
+                                <p class="white-text">
                                 Dès que vous nous aurez indiqué votre projet, 
                                 nous vous contacterons afin d'obtenir plus d'informations à son sujet,
                                 ce qui nous permettra de recuillir puis d'analyser les besoins pour la réalisation 
@@ -80,11 +80,13 @@
                                 </div>
                             </div>
                             <div class="process-text">
-                                <h3 class="mb-20">Conception du projet</h3>
-                                <p>
-                                Sur la base du cahier des charges que vous nous aurez transmis, ou que 
-                                nous aurons élaboré, correspondant à votre projet, 
-                                nous réaliserons le projet, dans le respect du délai initialement fixé.
+                                <h3 class="mb-20 yellow-text">Conception du projet</h3>
+                                <p class="white-text">
+                                    Suite à la validation du devis par vos soins et
+                                    sur la base du cahier des charges que vous nous aurez transmis, ou que 
+                                    nous aurons élaboré ensemble, correspondant à votre projet, 
+                                    nous réaliserons le projet, 
+                                    dans le respect du délai initialement fixé.
                                 </p>
                             </div>
                         </div>
@@ -93,15 +95,16 @@
                         <div class="process-item">
                             <div class="around-dotted dashed03">
                                 <div class="image" style="background-color: #63be52;">
-                                    <img src="assets/img/services/process03.svg" alt="Work Process" class="img-fluid" />
+                                    <img src="assets/img/services/process03.svg" alt="Work Process" class="img-fluid"/>
                                 </div>
                             </div>
                             <div class="process-text">
-                                <h3 class="mb-20">Livraison du projet</h3>
-                                <p>
-                                Après avoir réalisé tous les tests nécessaires et s'être assuré que 
-                                tout est fonctionnel, nous assurerons la mise en ligne de votre projet.
-                                Et vous pourrez désormais l'exploiter.
+                                <h3 class="mb-20 yellow-text">Livraison du projet</h3>
+                                <p class="white-text">
+                                    Après avoir réalisé tous les tests nécessaires et s'être assuré que 
+                                    tout est fonctionnel, nous assurerons la mise en ligne de votre projet.
+                                    Et vous pourrez désormais l'exploiter.Et nous resterons bien sûr à votre 
+                                    disposition pour apporter réponse à toutes vos demandes.
                                 </p>
                             </div>
                         </div>
@@ -119,14 +122,16 @@
                     <div class="col-lg-6">
                         <div class="about-us-image">
                             <div class="image">
-                                <img src="assets/img/services/services.png" alt="Image" />
+                                <img src="{{asset('assets/img/mask/agencework.jpg') | imagine_filter('mainserviceimage')}}" alt="Image"/>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-5 offset-lg-1">
                         <div class="about-us-text">
                             <div class="sub-heading">
-                                <h2>Pourquoi travailler avec nous?</h2>
+                                <h2>
+                                    Pourquoi travailler avec nous?
+                                </h2>
                             </div>
                             <div class="feature d-flex align-items-start mb-25">
                                 <div class="icon shadow d-flex align-items-center justify-content-center mr-15" style="background-color: #ff465e;">
@@ -168,7 +173,9 @@
                                     </p>
                                 </div>
                             </div>
-                            <a href="#priceArea" class="primary__button primary__button-bgPrimary shadow">Our Pricing Plan</a>
+                            <a href="{{path('contact')}}" class="primary__button primary__button-bgPrimary shadow">
+                                Soumettre un projet
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -183,17 +190,21 @@
         <section class="special-services our-services" style="position: relative;">
             <div class="container">
                 <div class="section-title text-center">
-                    <h2>Que pouvons nous faire pour vous?</h2>
+                    <h2>
+                        Que pouvons nous faire pour vous?
+                    </h2>
                 </div>
                 <div class="row">
                     <div class="col-lg-4 col-md-6">
                         <div class="special-services-item mb-50">
                             <div class="special-services-image special-services-image-bg-one">
-                                <img src="assets/img/services/special_services01.svg" alt="Special Services 01" class="img-fluid" />
+                                <img src="{{asset('assets/img/services/vitrine.png')}}" alt="icone-site-vitrine" class="img-fluid"/>
                             </div>
                             <div class="special-services-text">
-                                <h5>Création de site vitrine.</h5>
-                                <p>
+                                <h5 class="red-text">
+                                    Création de site vitrine.
+                                </h5>
+                                <p class="white-text">
                                     Un site vitrine est un site permettant de présenter sa société, ses produits, et services,
                                     ainsi que ses coordonnées, et un formulaire de contact pour être facilement joignable par ses clients.
                                 </p>
@@ -202,12 +213,14 @@
                     </div>
                     <div class="col-lg-4 col-md-6">
                         <div class="special-services-item mb-50">
-                            <div class="special-services-image special-services-image-bg-two">
-                                <img src="assets/img/services/special_services02.svg" alt="Special Services 02" class="img-fluid" />
+                            <div class="special-services-image">
+                                <img src="{{asset('assets/img/services/online-shopping.svg')}}" alt="shopping-website" class="img-fluid"/>
                             </div>
                             <div class="special-services-text">
-                                <h5>Création de site ecommerce</h5>
-                                <p>
+                                <h5 class="red-text">
+                                    Création de site ecommerce
+                                </h5>
+                                <p class="white-text">
                                     Un site ecommerce est une application qui permet de vendre en ligne ses produits ou ses services.
                                     On réalise votre site ecommerce sur mesure, ou en utilisant Prestashop, Shopify, ou Wordpress,
                                     tout dépend de votre choix.
@@ -217,12 +230,14 @@
                     </div>
                     <div class="col-lg-4 col-md-6">
                         <div class="special-services-item mb-50">
-                            <div class="special-services-image special-services-image-bg-three">
-                                <img src="assets/img/services/special_services07.svg" alt="Special Services 03" class="img-fluid" />
+                            <div class="special-services-image">
+                                <img src="{{asset('assets/img/services/tools.png')}}" alt="tools" class="img-fluid"/>
                             </div>
                             <div class="special-services-text">
-                                <h5>Refonte de site webs</h5>
-                                <p>
+                                <h5 class="red-text">
+                                    Refonte de site webs
+                                </h5>
+                                <p class="white-text">
                                     Nous pouvons apporter des modifications, des corrections, ou des améliorations sur les sites webs 
                                     réalisés en utilisant PHP, ou avec le framework Symfony, à partir de sa version 4.
                                 </p>
@@ -231,28 +246,33 @@
                     </div>
                     <div class="col-lg-4 col-md-6">
                         <div class="special-services-item mb-50">
-                            <div class="special-services-image special-services-image-bg-four">
-                                <img src="assets/img/services/special_services04.svg" alt="Special Services 04" class="img-fluid" />
+                            <div class="special-services-image">
+                                <img src="{{asset('assets/img/services/browser.png')}}" alt="api-icone" class="img-fluid"/>
                             </div>
                             <div class="special-services-text">
-                                <h5>Création d'Api</h5>
-                                <p>
+                                <h5 class="red-text">
+                                    Création d'Api
+                                </h5>
+                                <p class="white-text">
                                     Nous proposons la création d'Api sur mesure.
                                     Pour mener à bien cette tâche nous utilisons 
                                     aussi le framework PHP Symfony 5 et la plateforme
                                     Api Platform, facilitant la création d'Api robuste
                                     et scalable.
+                                </p>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6">
                         <div class="special-services-item mb-50">
-                            <div class="special-services-image special-services-image-bg-five">
-                                <img src="assets/img/services/special_services05.svg" alt="Special Services 05" class="img-fluid" />
+                            <div class="special-services-image">
+                                <img src="{{asset('assets/img/services/solution.png')}}" alt="integration-icone" class="img-fluid"/>
                             </div>
                             <div class="special-services-text">
-                                <h5>Intégration d'Api</h5>
-                                <p>
+                                <h5 class="red-text">
+                                    Intégration d'Api
+                                </h5>
+                                <p class="white-text">
                                     Si vous souhaitez intégrer une Api dans votre application web, 
                                     nous sommes en mesure de le faire pour vous.
                                 </p>
@@ -261,12 +281,14 @@
                     </div>
                     <div class="col-lg-4 col-md-6">
                         <div class="special-services-item mb-50">
-                            <div class="special-services-image special-services-image-bg-six">
-                                <img src="assets/img/services/special_services06.svg" alt="Special Services 06" class="img-fluid" />
+                            <div class="special-services-image">
+                                <img src="{{asset('assets/img/services/data.png')}}" alt="web-application" class="img-fluid"/>
                             </div>
                             <div class="special-services-text">
-                                <h5>Création d'applications web</h5>
-                                <p>
+                                <h5 class="red-text">
+                                    Création d'applications web
+                                </h5>
+                                <p class="white-text">
                                     La création d'applications web est notre spécialité. 
                                     Nous pouvons réaliser tous types d'applications web,
                                     en utilisant essentiellement PHP, Symfony, Laravel, 
@@ -278,12 +300,14 @@
                     </div>
                     <div class="col-lg-4 col-md-6">
                         <div class="special-services-item mb-50 mb-lg-0">
-                            <div class="special-services-image special-services-image-bg-one">
-                                <img src="assets/img/services/special_services01.svg" alt="Special Services 01" class="img-fluid" />
+                            <div class="special-services-image">
+                                <img src="{{asset('assets/img/services/mobile-app.png')}}" alt="mobile-app" class="img-fluid"/>
                             </div>
                             <div class="special-services-text">
-                                <h5>Applications mobiles.</h5>
-                                <p>
+                                <h5 class="red-text">
+                                    Applications mobiles.
+                                </h5>
+                                <p class="white-text">
                                     Nous connaissons aussi les technologies appropriées 
                                     pour la création d'applications mobiles, 
                                     notamment React native. 
@@ -294,12 +318,14 @@
                     </div>
                     <div class="col-lg-4 col-md-6">
                         <div class="special-services-item mb-50 mb-lg-0">
-                            <div class="special-services-image special-services-image-bg-two">
-                                <img src="assets/img/services/special_services02.svg" alt="Special Services 02" class="img-fluid" />
+                            <div class="special-services-image">
+                                <img src="{{asset('assets/img/services/stats.png')}}" alt="icone-croissance" class="img-fluid"/>
                             </div>
                             <div class="special-services-text">
-                                <h5>SEO/SEA.</h5>
-                                <p>
+                                <h5 class="red-text">
+                                    SEO/SEA.
+                                </h5>
+                                <p class="white-text">
                                     Nous saurons oeuvrer à l'optimisation du référencement naturel de votre application, 
                                     ou mettre en oeuvre pour vous des solutions marketings efficaces.
                                 </p>
@@ -308,14 +334,14 @@
                     </div>
                     <div class="col-lg-4 col-md-6">
                         <div class="special-services-item">
-                            <div class="special-services-image special-services-image-bg-three">
-                                <img src="assets/img/services/special_services07.svg" alt="Special Services 03" class="img-fluid" />
+                            <div class="special-services-image">
+                                <img src="{{asset('assets/img/services/new.png')}}" alt="new-icone" class="img-fluid"/>
                             </div>
                             <div class="special-services-text">
-                                <h5>
+                                <h5 class="red-text">
                                     Ajout de fonctionnalités.
                                 </h5>
-                                <p>
+                                <p class="white-text">
                                     Si vous souhaitez ajouter des fonctionnalités à votre application 
                                     comme par exemple une newsletter, un formulaire de recherche, de contact,
                                     un système de réservation, ou toute autre, nous pouvons aussi le réaliser 
@@ -337,19 +363,21 @@
                 <div class="row align-items-center">
                     <div class="col-lg-7 col-md-12 order-2 order-lg-1">
                         <div class="callto-action-text">
-                            <h2>
-                                Vous avez un projet à l'esprit? Contactez nous.
-                            </h2>
-                            <p>
-                            Précisez nous votre projet, et si vous disposez d'un cahier des charges, 
-                            merci également de nous le transmettre. Nous reviendrons vers vous dans les meilleurs délais.
+                            <h3 class="red-text">
+                                Vous avez un projet? Contactez nous.
+                            </h3>
+                            <p class="white-text">
+                                Précisez nous votre projet via le formulaire de contact. 
+                                Et nous reviendrons vers vous dans les meilleurs délais.
                             </p>
-                            <a href="{{path('contact')}}" class="primary__button primary__button-bgPrimary">Send Message</a>
+                            <a href="{{path('contact')}}" class="primary__button primary__button-bgPrimary">
+                                Send Message
+                            </a>
                         </div>
                     </div>
                     <div class="col-lg-5 col-md-12 order-1 order-lg-2">
                         <div class="callto-action-image">
-                            <img src="assets/img/action/image.svg" alt="Call To Action" />
+                            <img src="{{asset('assets/img/mask/phonetel.jpg')}}" alt="Call To Action"/>
                         </div>
                     </div>
                 </div>
