@@ -110,6 +110,9 @@
                                 </div>
                             </div>
                         {% endfor %}
+                        <div class="col-lg-12 col-12 col-md-12 col-sm-12">
+                            {{knp_pagination_render(projects, 'pagination.html.twig')}}
+                        </div>
                     {% else %}
                         <h4 class="no-project">
                             Votre portfolio ne contient aucun projet, veuillez en ajouter.
