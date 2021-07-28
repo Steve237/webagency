@@ -147,13 +147,13 @@
     {% block body %}
     {% endblock %}
     <footer>
-        <div class="footer-area">
+        <div class="footer-area background-color">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-4 col-md-6 order-lg-0 order-4">
                         <div class="footer-area-about mb-50">
-                            <h4>About Us</h4>
-                            <p>
+                            <h4 class="footer-text">About Us</h4>
+                            <p class="footer-text">
                                 Programerz, société de conception et d'exploitations de programmes informatiques.
                             </p>
                             <div class="footer-area-links">
@@ -171,21 +171,27 @@
                     </div>
                     <div class="col-lg-2 mr-lg-65 col-md-4 col-6 order-lg-0 order-md-1">
                         <div class="footer-area-lists mb-30">
-                            <h4>Company</h4>
+                            <h4 class="footer-text">
+                                Company
+                            </h4>
                             <ul>
                                 <li>
-                                    <a href="{{path('about-us')}}">About us</a>
+                                    <a href="{{path('about-us')}}" class="footer-text">
+                                        About us
+                                    </a>
                                 </li>
                                 <li>
-                                    <a href="{{path('contact')}}">Contact us</a>
+                                    <a href="{{path('contact')}}" class="footer-text">
+                                        Contact us
+                                    </a>
                                 </li>
                                 <li>
                                     {% if app.user %}
-                                        <a href="{{path('app_logout')}}">
+                                        <a href="{{path('app_logout')}}" class="footer-text">
                                             Logout
                                         </a>
                                     {% else %}
-                                        <a href="{{path('app_login')}}">
+                                        <a href="{{path('app_login')}}" class="footer-text">
                                             Espace administrateur
                                         </a>
                                     {% endif %}
@@ -195,11 +201,6 @@
                     </div>
                 </div>
             </div>
-            <div class="footer-area-shape">
-                <img src="{{asset('assets/img/mask/penta-02.svg')}}" alt="shape" class="img-fluid ft-shape-01" />
-                <img src="{{asset('assets/img/mask/downShape.svg')}}" alt="shape" class="img-fluid ft-shape-02" />
-                <img src="{{asset('assets/img/mask/circle-01.svg')}}" alt="shape" class="img-fluid ft-shape-03" />
-            </div>
         </div>
         <!-- copyright area -->
         <div class="copyright">
@@ -207,7 +208,7 @@
                 <div class="row align-items-center copyright-area">
                     <div class="col-lg-5 col-md-4 col-sm-12">
                         <div class="copyright-area-text">
-                            <p>Programerz | Copyright {{ "now"|date("Y") }}. All Rights Reserved.</p>
+                            <p>Programerz | Copyright {{"now"|date("Y")}}. All Rights Reserved.</p>
                         </div>
                     </div>
                     <div class="col-lg-5 col-md-4 col-sm-12">
