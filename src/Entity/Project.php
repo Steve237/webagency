@@ -80,6 +80,11 @@ class Project
      */
     private $slug;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $shortdescription;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -216,6 +221,18 @@ class Project
     public function setSlug(string $slug): self
     {
         $this->slug = $slug;
+
+        return $this;
+    }
+
+    public function getShortdescription(): ?string
+    {
+        return $this->shortdescription;
+    }
+
+    public function setShortdescription(string $shortdescription): self
+    {
+        $this->shortdescription = $shortdescription;
 
         return $this;
     }

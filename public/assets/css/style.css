@@ -11581,6 +11581,9 @@ aside,
 }
 /*# sourceMappingURL=style.css.map */
 
+
+
+
 /* homepage */
 
 .stack-section {
@@ -11616,6 +11619,42 @@ aside,
 .mainsection {
 
   height:100vh;
+
+}
+
+.last-project-shortdescription {
+  
+  color:white;
+  max-width:500px;
+  margin:auto;
+  margin-top:15px;
+
+}
+
+.last-project-title {
+
+  margin-bottom:10px;
+
+}
+
+.project-title {
+
+  color:blue;
+
+}
+
+.show-project-btn {
+
+  margin-top:20px;
+
+}
+
+/* liste des projets */
+
+.description-project {
+
+  height:200px;
+
 
 }
 
@@ -11674,13 +11713,44 @@ width:100%;
 
 /*  Page détail projet */
 
-.projet-description {
+.project-content {
 
-  margin-bottom:200px;
+  margin-bottom:100px;
+
+}
+
+.project-presentation {
+
+  color:white;
+
+}
+
+.project-image-section {
+
+  border:1px solid red;
+  background-color:brown;
+  padding:10px;
+
+}
+
+.project-image {
+
+  margin:auto;
+}
+
+#project-details {
+
+  margin-top:20px;
 
 }
 
 /*  Page admin liste des projets */
+
+.main-title {
+
+  color:white;
+
+}
 
 .button-add {
 
@@ -11707,6 +11777,7 @@ color:white;
 
 }
 
+
 .duration {
 
 color:white;
@@ -11719,4 +11790,12 @@ color:white;
   
 }
   
+.app-qualities {
+
+  margin-bottom:50px;
+
+
+}
+
+
 

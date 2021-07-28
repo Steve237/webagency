@@ -357,61 +357,32 @@
     <section class="projectSlider" id="projectSlider">
         <div class="container">
             <div class="section-title text-center">
-                <h2>Our last project</span></h2>
-            </div>
-            <div class="row">
-                <div class="col-lg-5 order-2 order-lg-0">
-                    <div class="projectSlider__leftContent">
-                        <h5 class="projectSlider__subTitle">Réalisé avec PHP/SYMFONY 5 et Javascript.</h5>
-                        <h2 class="projectSlider__ContentTitle">Mooviz</h2>
-                        <p class="projectSlider__textContents">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis risus purus. Maecenas libero velit, lacinia cursus cursus mattis, interdum vehicula arcu. Duis erat justo, tincidunt et tristique ut,
-                            consequat eget lectus. Cras tincidunt dictum erat, at dignissim leo fringilla eu. Donec sit amet. <br />
-                            <br />
-                            Interdum vehicula arcu. Duis erat justo, tincidunt et tristique ut, consequat eget lectus. Cras tincidunt dictum erat, at dignissim leo fringilla eu.
-                        </p>
-                        <div class="projectSlider__buttons">
-                            <a class="primary__button primary__button-bgPrimary" href="javascript:void(0)">Live Preview</a>
-                        </div>
+                <h2>
+                    <span>Notre dernier projet</span>
+                </h2>
+                
+                <h3 class="title-project last-project-title">
+                    {{project[0].title}}
+                </h3>
+                
+                <a href="{{path('project', {'id': project[0].id})}}">
+                    <div>
+                        <img src="{{asset('assets/img/project/' ~ project[0].coverimage) | imagine_filter('coverimage')}}">
                     </div>
+                </a>
+                
+                <div class="last-project-shortdescription">
+                    {{project[0].shortdescription}}
                 </div>
-                <div class="col-lg-7 order-1 order-lg-0">
-                    <div class="swiper-container projectSlider__container">
-                        <div class="swiper-wrapper projectSlider__wrapper">
-                            <div class="swiper-slide projectSlider__slide">
-                                <img src="assets/img/blog/article01.jpg" alt="ProjectSlider" class="projectSlider__slideImg img-fluid" />
-                            </div>
-                            <div class="swiper-slide projectSlider__slide">
-                                <img src="assets/img/blog/article02.jpg" alt="ProjectSlider" class="projectSlider__slideImg img-fluid" />
-                            </div>
-                            <div class="swiper-slide projectSlider__slide">
-                                <img src="assets/img/blog/article03.jpg" alt="ProjectSlider" class="projectSlider__slideImg img-fluid" />
-                            </div>
-                            <div class="swiper-slide projectSlider__slide">
-                                <img src="assets/img/blog/article01.jpg" alt="ProjectSlider" class="projectSlider__slideImg img-fluid" />
-                            </div>
-                            <div class="swiper-slide projectSlider__slide">
-                                <img src="assets/img/blog/article02.jpg" alt="ProjectSlider" class="projectSlider__slideImg img-fluid" />
-                            </div>
-                            <div class="swiper-slide projectSlider__slide">
-                                <img src="assets/img/blog/article03.jpg" alt="ProjectSlider" class="projectSlider__slideImg img-fluid" />
-                            </div>
-                        </div>
-                        <!-- Add Pagination -->
-                        <div class="swiper-pagination projectSlider__pagination"></div>
-                        <!-- Add Arrows -->
-                        <div class="swiper-button-next projectSlider__next">
-                            <i class="fas fa-arrow-right"></i>
-                        </div>
-                        <div class="swiper-button-prev projectSlider__prev">
-                            <i class="fas fa-arrow-right"></i>
-                        </div>
-                    </div>
-                </div>
+                
+                <a href="{{path('project', {'id': project[0].id})}}">
+                    <button class="btn btn-danger show-project-btn">
+                        <i class="fa fa-eye"></i>
+                    </button>
+                </a>
             </div>
         </div>
     </section>
-
     <section class="contactArea">
         <div class="container" id="contact-form">
             <div class="row">

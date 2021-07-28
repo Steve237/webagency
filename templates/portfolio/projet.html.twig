@@ -1,6 +1,8 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello AdminAreaController!{% endblock %}
+{% block title %}
+    {{project.title}}
+{% endblock %}
 
 {% block body %}
     <main class="project-details-content background-color">
@@ -12,16 +14,15 @@
                         <div class="col-lg-6 order-2 order-lg-1">
                             <div class="bannerArea__wrapper">
                                 <div class="bannerArea__title">
-                                    <h1>Project Details</h1>
+                                    <h4 class="main-title">
+                                        Détails du projet
+                                    </h4>
                                 </div>
-                                <p>
-                                    Praesent non pharetra lorem. Quisque vitae eros ut dui egestas ultrices et quis odio. Praesent vitae tincidunt lacus.
-                                </p>
                             </div>
                         </div>
                         <div class="col-lg-6 order-1 order-lg-2 navbar-banner">
                             <div class="banner-image">
-                                <img src="assets/img/banner/breadcrumb-banner.png" alt="banner-image" class="img-fluid" />
+                                <img src="{{asset('assets/img/banner/breadcrumb-banner.png')}}" alt="banner-image" class="img-fluid"/>
                             </div>
                         </div>
                     </div>
@@ -52,67 +53,54 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm-12 project-description">
-                        <div class="overview-image">
-                            <img class="img-fluid" src="assets/img/project/project-overview.jpg" alt="image" />
-                        </div>
-                        <div class="project-overview-wrapper">
+                        <center class="project-image-section">
+                            <img class="img-fluid project-image" src="{{asset('assets/img/project/' ~ project.coverimage) | imagine_filter('coverimage')}}" alt="image"/>
+                        </center>
+                        <div class="project-overview-wrapper" id="project-details">
                             <div class="overview-detail">
                                 <div class="detail-tittle">
-                                    <p>Clients</p>
-                                    <h6>WebGeniusLab - Agency</h6>
+                                    <p>Client</p>
+                                    <h6>{{project.client}}</h6>
                                 </div>
                                 <div class="detail-tittle">
-                                    <p>Category</p>
-                                    <h6>Redesign Dashboard</h6>
+                                    <p>Durée de réalisation</p>
+                                    {% if project.duration is not empty %}
+                                    <h6>
+                                        {{project.duration}}
+                                    </h6>
+                                    {% else %}
+                                    <h6>
+                                        Projet en cours
+                                    </h6>
+                                    {% endif %}
                                 </div>
-                                <div class="detail-tittle">
-                                    <p>Duration</p>
-                                    <h6>3 Months</h6>
-                                </div>
-                                <div class="detail-tittle">
-                                    <p>Clients</p>
-                                    <h6>www.poco.com</h6>
-                                </div>
+                                {% if project.url is not empty %}
+                                    <div class="detail-tittle">
+                                        <p>Lien vers le site</p>
+                                        <h6>{{project.url}}</h6>
+                                    </div>
+                                {% endif %}
                             </div>
                         </div>
-                        <div class="project-detail-content mb-40">
-                            <h2>Dashboard Redesign</h2>
-                            <p>
-                                Nunc eu augue at nunc consectetur venenatis sit amet sodales metus. Sed at gravida nisi, mattis lacinia ipsum. Pellentesque suscipit odio quis ligula maximus aliquet. Integer cursus ipsum et posuere
-                                ornare. Aliquam erat volutpat. Vivamus suscipit, orci non venenatis laoreet, odio eros pharetra dui, vitae aliquam massa elit sit amet dolor. Sed sagittis metus ac porta tincidunt. Nulla tincidunt, sapien
-                                vitae consequat rhoncus, neque neque faucibus quam, ornare volutpat diam neque ut nunc. Vivamus porta leo libero, eget vehicula mi facilisis nec. Sed id sollicitudin enim, ut euismod tellus. Curabitur
-                                eleifend semper erat vel tristique. In ut consequat nisl. Donec ultrices Aliquam erat volutpat. Vivamus suscipit, orci non venenatis laoreet, odio eros pharetra dui.
-                                <br />
-                                <br />
-                                Nunc eu augue at nunc consectetur venenatis sit amet sodales metus. Sed at gravida nisi, mattis lacinia ipsum. Pellentesque suscipit odio quis ligula maximus aliquet. Integer cursus ipsum et posuere
-                                ornare. Aliquam erat volutpat. Vivamus suscipit, orci non venenatis laoreet, odio eros pharetra dui, vitae aliquam massa elit sit amet dolor. Sed sagittis metus ac porta tincidunt. Nulla tincidunt.
-                            </p>
-                        </div>
-                        <div class="project-detail-content-project">
-                            <div class="row">
-                                <div class="col-sm-6 mb-40">
-                                    <img src="assets/img/project/overview01.png" alt="image" class="img-fluid" />
-                                </div>
-                                <div class="col-sm-6 mb-40">
-                                    <img src="assets/img/project/overview02.png" alt="image" class="img-fluid" />
-                                </div>
+                        <div class="project-detail-content mb-40 project-content">
+                            <h2 class="project-title">
+                                {{project.title}}
+                            </h2>
+                            <div class="project-presentation">
+                                {{project.description | raw}}
                             </div>
+                            {% if project.videolink is not empty %}
                             <p>
-                                Nunc eu augue at nunc consectetur venenatis sit amet sodales metus. Sed at gravida nisi, mattis lacinia ipsum. Pellentesque suscipit odio quis ligula maximus aliquet. Integer cursus ipsum et posuere
-                                ornare. Aliquam erat volutpat. Vivamus suscipit, orci non venenatis laoreet, odio eros pharetra dui, vitae aliquam massa elit sit amet dolor. Sed sagittis metus ac porta tincidunt. Nulla tincidunt, sapien
-                                vitae consequat rhoncus, neque neque faucibus quam, ornare volutpat diam neque ut nunc. Vivamus porta leo libero, eget vehicula mi facilisis nec. Sed id sollicitudin enim, ut euismod tellus. Curabitur
-                                eleifend semper erat vel tristique. In ut consequat nisl. Donec ultrices Aliquam erat volutpat. Vivamus suscipit, orci non venenatis laoreet, odio eros pharetra dui.
-                                <br />
-                                <br />
-                                Nunc eu augue at nunc consectetur venenatis sit amet sodales metus. Sed at gravida nisi, mattis lacinia ipsum. Pellentesque suscipit odio quis ligula maximus aliquet. Integer cursus ipsum et posuere
-                                ornare. Aliquam erat volutpat. Vivamu.
+                                <button class="btn btn-danger">
+                                    Démonstration youtube
+                                </button>
                             </p>
+                            {% endif %}
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-
     </main>
 {% endblock %}
         

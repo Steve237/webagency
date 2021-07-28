@@ -196,7 +196,9 @@
     <section class="d-md-block d-block d-lg-none about-solution">
         <div class="container">
             <div class="section-title text-center">
-                <h2>Why Should You Work With Us?</h2>
+                <h2>
+                    Quelles sont les qualités de nos applications?
+                </h2>
             </div>
             <div class="row">
                 <div class="col-sm-12">
@@ -204,9 +206,12 @@
                         <div class="solution-title center">
                             <h4>
                                 <span>01.</span>
-                                Business Solution
+                                Sécurisé.
                             </h4>
-                            <p>Ut id orci ultricies, gravida arcu ac, elementum eros. Curabitur tortor ipsum, imperdiet eget odio ac, faucibus ultricies nisl.</p>
+                            <p>
+                               Nous veillons lors de la conception de nos applications à ce qu'elles soient sécurisés 
+                               contre toutes les failles de sécurité, afin qu'aucune ne puisse faire l'objet d'un piratage informatique.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -215,9 +220,13 @@
                         <div class="solution-title center">
                             <h4>
                                 <span>02.</span>
-                                Organization
+                                Responsive
                             </h4>
-                            <p>Ut id orci ultricies, gravida arcu ac, elementum eros. Curabitur tortor ipsum, imperdiet eget odio ac, faucibus ultricies nisl.</p>
+                            <p>
+                                Les applications que nous concevons sont responsives, c'est à dire adaptés à tous les écrans,
+                                afin qu'elles puissent être consultés sur tous les écrans, de smartphones, tablettes, ordinateurs, 
+                                ou de télévisions.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -226,21 +235,28 @@
                         <div class="solution-title center">
                             <h4>
                                 <span>03.</span>
-                                Business Idea
+                               Rapidité et performance.
                             </h4>
-                            <p>Ut id orci ultricies, gravida arcu ac, elementum eros. Curabitur tortor ipsum, imperdiet eget odio ac, faucibus ultricies nisl.</p>
+                            <p>
+                               Nous nous assurons que nos applications soient rapides et performantes, 
+                               afin que leur utilisation soit la plus agréable possible
+                               et qu'elle puisse répondre le plus parfaitement à leur but.
+                            </p>
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-12">
                     <div class="solution-wrapper mb-30">
                         <div class="solution-title center">
-                            <h4>
-                                <span>04.</span>
-                                Improvments
-                            </h4>
-                            <p>Ut id orci ultricies, gravida arcu ac, elementum eros. Curabitur tortor ipsum, imperdiet eget odio ac, faucibus ultricies nisl.</p>
-                        </div>
+                        <h4>
+                            <span>04.</span>
+                            Testé.
+                        </h4>
+                        <p>
+                            Nous testons l'ensemble des fonctionnalités de chaque application que nous concevons afin de s'assurer
+                            qu'elles ne rencontrent aucune faille, et que tout fonctionne correctement, afin de livrer aux utilisateurs finaux
+                            un travail parfait.
+                        </p>
                     </div>
                 </div>
                 <div class="col-sm-12">
@@ -248,9 +264,12 @@
                         <div class="solution-title center">
                             <h4>
                                 <span>05.</span>
-                                Consultancy
+                                Design de qualité
                             </h4>
-                            <p>Ut id orci ultricies, gravida arcu ac, elementum eros. Curabitur tortor ipsum, imperdiet eget odio ac, faucibus ultricies nisl.</p>
+                            <p>
+                                Le design d'une application est très important, car il réprésente ce que les utilisateurs vont voir. 
+                                Nous produisons donc des applications élégantes, mais surtout conformes aux exigences de nos clients.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -259,9 +278,12 @@
                         <div class="solution-title center">
                             <h4>
                                 <span>06.</span>
-                                Strategy
+                                Scalable.
                             </h4>
-                            <p>Ut id orci ultricies, gravida arcu ac, elementum eros. Curabitur tortor ipsum, imperdiet eget odio ac, faucibus ultricies nisl.</p>
+                            <p>
+                                Nos applications sont scalables, donc adaptés à l'augmentation du trafic,
+                                notamment car nous les déployons sur des serveurs appropriés, en fonction du projet.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -273,8 +295,6 @@
             <img class="mask3" src="assets/img/mask/downShape.svg" alt="mask" />
         </div>
     </section>
- 
-    <!--  WORK SOLUTION AREA -->
     <section class="about-skill">
         <div class="container">
             <div class="row align-items-center align-items-lg-start">
@@ -298,12 +318,11 @@
                 </div>
                 <div class="col-lg-5 order-1 order-lg-0 knowledge-image">
                     <div class="about-skill-image">
-                        <img src="{{asset('assets/img/banner/knowledge.png')}}" alt="image" style="width:585px;height:960px"/>
+                        <img src="{{asset('assets/img/banner/knowledge.png') | imagine_filter('coverimage')}}" alt="image"/>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-  
 </main>
 {% endblock %}
