@@ -11673,6 +11673,22 @@ aside,
 
 }
 
+.services-area {
+
+  position: relative;
+
+}
+
+.about-area {
+
+  background-color: #fff5f7; 
+  position: relative; 
+  margin: 0 45px 130px 45px; 
+  border-radius: 24px; 
+  z-index: 5;
+
+}
+
 .navbar-banner {
 
 margin-top: 150px;
@@ -11833,4 +11849,36 @@ color:white;
 }
 
 
+.background-purple {
 
+  background-color: #7353ff;
+
+}
+
+.background-blue {
+
+  background-color: #29c6ff;
+}
+
+.background-green {
+
+  background-color: #63be52;
+}
+
+.background-red {
+
+
+  background-color: #ff465e;
+
+}
+
+.background-yellow {
+
+  background-color: #fab005;
+}
+
+.background-marine {
+
+  background-color: #5746ff;
+
+}

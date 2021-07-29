@@ -35,7 +35,7 @@
             <div class="row align-items-center">
                 <div class="col-lg-6 col-md-12">
                     <div class="about-info-image">
-                        <img src="{{asset('assets/img/mask/imagedev.png')}}" alt="Presenting A Project" style="width:800px;height:600px" />
+                        <img src="{{asset('assets/img/mask/imagedev.png') | imagine_filter('imagedev')}}" alt="developper"/>
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-12">
@@ -281,7 +281,7 @@
     <section class="testimonial-area testimonial04" style="background-image: url(assets/img/mask/paint.jpg);">
         <div class="container">
             <div class="section-title mb-50">
-                <h2 class="mb-20" style="color:red">
+                <h2 class="mb-20 red-text">
                     Nos prestations
                 </h2>
             </div>
@@ -298,7 +298,6 @@
                                     de réaliser tous types d'applications web, notamment via des CMS, ou le langage PHP.
                                 </p>
                             </div>
-                            <a class="testimonial-icon" href="javascript:void(0)"> <img src="{{asset('assets/img/icon/arrow-right.svg')}}" alt="icon" /> </a>
                         </div>
                     </div>
                     <div class="col-xl-4 single-slider">
@@ -311,7 +310,6 @@
                                 <p>Nous disposons aussi des compétences nécessaires pour réaliser des API Rest robustes 
                                 grâce au Framework Symfony 5 et à Api Platform</p>
                             </div>
-                            <a class="testimonial-icon" href="javascript:void(0)"> <img src="{{asset('assets/img/icon/arrow-right.svg')}}" alt="icon" /> </a>
                         </div>
                     </div>
                     <div class="col-xl-4 single-slider">
@@ -324,7 +322,6 @@
                                 <p>Vous souhaitez intégrer une API dans votre application? Confiez nous votre projet, 
                                 nous avons les ressources nécessaires pour mener à bon terme ce type d'ouvrage.</p>
                             </div>
-                            <a class="testimonial-icon" href="javascript:void(0)"> <img src="{{asset('assets/img/icon/arrow-right.svg')}}" alt="icon" /> </a>
                         </div>
                     </div>
                     <div class="col-xl-4 single-slider">
@@ -339,7 +336,6 @@
                                 mais il s'agit aussi d'une de nos spécialités, que nous mettrons volontiers à votre service.
                                 </p>
                             </div>
-                            <a class="testimonial-icon" href="javascript:void(0)"> <img src="{{asset('assets/img/icon/arrow-right.svg')}}" alt="icon" /> </a>
                         </div>
                     </div>
                 </div>
