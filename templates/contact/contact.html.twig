@@ -12,7 +12,9 @@
                   <div class="col-lg-6 order-2 order-lg-1">
                       <div class="bannerArea__wrapper">
                           <div class="bannerArea__title">
-                              <h2>Soumettez nous votre projet</h2>
+                            <h3 class="white-text">
+                                Soumettez nous votre projet
+                            </h3>
                           </div>
                       </div>
                   </div>
@@ -28,7 +30,7 @@
                           <nav aria-label="breadcrumb">
                               <ol class="breadcrumb">
                                   <li class="breadcrumb-item">
-                                      <a href="index.html">Home</a>
+                                      <a href="{{path('home')}}">Home</a>
                                   </li>
                                   <li class="breadcrumb-item active" aria-current="page">
                                      Contact
@@ -39,7 +41,7 @@
                   </div>
               </div>
               <div class="breadcrumbmask">
-                  <img class="mask1" src="assets/img/mask/layerShape-02.png" alt="mask" />
+                  <img class="mask1" src="{{asset('assets/img/mask/layerShape-02.png')}}" alt="mask"/>
               </div>
             </div>
         </div>
@@ -57,7 +59,7 @@
     <section class="conatact-area">
         <div class="container conatact-area__container">
             <div class="section-title text-center">
-                <h2>Get In Touch</h2>
+                <h3>Contactez nous</h3>
             </div>
             {% for message in app.flashes('success-message') %}
             <div class="alert alert-success">
@@ -95,7 +97,7 @@
                                 </div>
                             </div>
                             <button type="submit" class="primary__button primary__button-bgPrimary shadow">
-                                Send Message
+                                Envoyez
                             </button>
                         {{form_end(form)}}
                     </div>
