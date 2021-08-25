@@ -20,7 +20,8 @@ final class Version20210720162400 extends AbstractMigration
     public function up(Schema $schema): void
     {
         // this up() migration is auto-generated, please modify it to your needs
-        $this->addSql('ALTER TABLE project DROP slug');
+        $this->addSql('CREATE TABLE project (id INT AUTO_INCREMENT NOT NULL, title VARCHAR(255) NOT NULL, client VARCHAR(255) NOT NULL, duration VARCHAR(255) DEFAULT NULL, url VARCHAR(255) DEFAULT NULL, coverimage VARCHAR(255) NOT NULL, description LONGTEXT NOT NULL, videolink VARCHAR(255) DEFAULT NULL, created_at DATETIME NOT NULL, updated_at DATETIME NOT NULL, slug VARCHAR(255) NOT NULL, shortdescription VARCHAR(255) NOT NULL, PRIMARY KEY(id)) DEFAULT CHARACTER SET utf8mb4 COLLATE `utf8mb4_unicode_ci` ENGINE = InnoDB');
+
     }
 
     public function down(Schema $schema): void
