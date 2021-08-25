@@ -3,7 +3,7 @@
 {% block title %}About{% endblock %}
 
 {% block body %}
-<main class="background-color">
+<main class="background-color main-section">
     <!--  BREADCRUMB AREA -->
     <section class="banner-area breadcrumArea banner__About">
         <div class="container custom-container">
@@ -12,14 +12,14 @@
                   <div class="col-lg-6 order-2 order-lg-1">
                       <div class="bannerArea__wrapper navbar-banner">
                           <div class="bannerArea__title">
-                              <h3>A propos</h3>
+                              <h3 class="white-text">A propos</h3>
                           </div>
                       </div>
                   </div>
                   <div class="col-lg-6 order-1 order-lg-2 navbar-banner">
-                      <div class="banner-image">
-                          <img src="assets/img/banner/breadcrumb-banner.png" alt="banner-image" class="img-fluid" />
-                      </div>
+                    <div class="banner-image">
+                        <img src="{{asset('assets/img/mask/workagence.jpg') | imagine_filter('bannerimage')}}" alt="banner-image" class="img-fluid"/>
+                    </div>
                   </div>
               </div>
               <div class="row">
@@ -35,7 +35,7 @@
                   </div>
               </div>
               <div class="breadcrumbmask">
-                  <img class="mask1" src="assets/img/mask/layerShape-02.png" alt="mask" />
+                  <img class="mask1" src="{{asset('assets/img/mask/layerShape-02.png')}}" alt="mask" />
               </div>
             </div>
         </div>
@@ -48,7 +48,7 @@
                 <div class="col-lg-6">
                     <div class="about-us-image">
                         <div class="image">
-                            <img src="assets/img/about/aboutus.png" alt="Image" class="img-fluid" />
+                            <img src="{{asset('assets/img/mask/webagency.png') | imagine_filter('aboutusimage')}}" alt="Image" class="img-fluid"/>
                         </div>
                         <div class="small-feature sm-feauter-top" style="background-color: #fab005;">
                             <div class="small-feature-item">
@@ -70,13 +70,13 @@
                 <div class="col-lg-6">
                     <div class="about-us-text">
                         <div class="sub-heading">
-                            <h2>Qui sommes nous?</h2>
-                            <p>
+                            <h2 class="red-text">Qui sommes nous?</h2>
+                            <p class="white-text">
                                 Programerz est une société de programmation dont l'activité consiste à réaliser des applications webs ou mobiles,
                                 ainsi que des logiciels, aussi bien pour les entreprises que pour les particuliers. 
                             </p>
                             </br>
-                            <p>
+                            <p class="white-text">
                                 Nous proposons des tarifs adaptés aux budgets de nos clients, mais fournissons aussi un travail d'excellente qualité, notamment grâce à notre maîtrise
                                 des principaux langages de programmation pour la conception d'applications web, à notre bonne organisation, et à notre détermination à concevoir 
                                 des produits numériques absolument conformes aux projets qui nous sont confiés.
@@ -89,7 +89,7 @@
     </section>
 
     <!--  ABOUT SOLUTION AREA -->
-    <section class="about-solution d-md-none d-none d-lg-block">
+    <section class="about-solution about-zone d-md-none d-none d-lg-block">
         <div class="container">
             <div class="section-title text-center">
                 <h2>Quelles sont les qualités de nos applications?</h2>
@@ -138,7 +138,7 @@
                             </div>
                         </div>
                         <div class="col-lg-4">
-                            <img src="assets/img/mask/work.png" alt="mask" class="img-fluid" />
+                            <img src="{{asset('assets/img/mask/organisation.jpg') | imagine_filter('circleimage')}}" alt="mask" class="img-fluid"/>
                         </div>
                         <div class="col-lg-4">
                             <div class="solution-wrapper mb-50">
@@ -187,9 +187,9 @@
                 </div>
             </div>
             <div class="mask-group">
-                <img class="mask1" src="assets/img/mask/leftMask.svg" alt="mask" />
-                <img class="mask2" src="assets/img/mask/mask8.png" alt="mask" />
-                <img class="mask3" src="assets/img/mask/downShape.svg" alt="mask" />
+                <img class="mask1" src="{{asset('assets/img/mask/leftMask.svg')}}" alt="mask" />
+                <img class="mask2" src="{{asset('assets/img/mask/mask8.png')}}" alt="mask" />
+                <img class="mask3" src="{{asset('assets/img/mask/downShape.svg')}}" alt="mask" />
             </div>
         </div>
     </section>
@@ -290,9 +290,9 @@
             </div>
         </div>
         <div class="mask-group">
-            <img class="mask1" src="assets/img/mask/leftMask.svg" alt="mask" />
-            <img class="mask2" src="assets/img/mask/mask8.png" alt="mask" />
-            <img class="mask3" src="assets/img/mask/downShape.svg" alt="mask" />
+            <img class="mask1" src="{{asset('assets/img/mask/leftMask.svg')}}" alt="mask" />
+            <img class="mask2" src="{{asset('assets/img/mask/mask8.png')}}" alt="mask" />
+            <img class="mask3" src="{{asset('assets/img/mask/downShape.svg')}}" alt="mask" />
         </div>
     </section>
     <section class="about-skill">
@@ -301,8 +301,10 @@
                 <div class="col-lg-7 order-2 order-lg-0">
                     <div class="about-skill-wrapper">
                         <div class="about-skill-title">
-                            <h2>Veille technologique permanente</h2>
-                            <p>
+                            <h2 class="red-text">
+                                Veille technologique permanente
+                            </h2>
+                            <p class="white-text">
                               Afin de pouvoir concevoir des applications de la meilleure qualité possible, 
                               mais surtout pouvoir réaliser des applications riches en fonctionnalités, 
                               nous nous tenons régulièrement informés concernant l'utilisation des langages de programmation, 
@@ -310,7 +312,8 @@
                               apprenons sans cesse des nouveautés, ce qui a pour effet de faire augmenter nos compétences.
                             </p>
                             </br>
-                            <p>Vous pouvez travailler avec nous en toute confiance, car nous saurons toujours trouver la solution 
+                            <p class="white-text">
+                                Vous pouvez travailler avec nous en toute confiance, car nous saurons toujours trouver la solution 
                                 approprié pour réaliser vos souhaits.
                             </p>
                         </div>

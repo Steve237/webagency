@@ -11592,6 +11592,12 @@ aside,
 
 }
 
+.footer-text {
+
+  color:white;
+
+}
+
 .stack-content {
 
   padding-bottom:20px;
@@ -11677,6 +11683,29 @@ margin-top: 150px;
 
 width:100%;
 
+}
+
+.main-section {
+
+  margin-bottom:50px;
+}
+
+.white-text {
+
+  color:white;
+
+}
+
+.red-text {
+
+  color:red;
+
+}
+
+
+.yellow-text {
+
+  color:yellow;
 
 }
 
@@ -11685,6 +11714,12 @@ width:100%;
 .knowledge-image {
 
   margin-top:30px;
+
+}
+
+.about-zone {
+
+background-color:white;
 
 }
 

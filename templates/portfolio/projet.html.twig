@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block body %}
-    <main class="project-details-content background-color">
+    <main class="project-details-content background-color main-section">
         <!--  BREADCRUMB AREA -->
         <section class="banner-area breadcrumArea mb-0" >
             <div class="container custom-container">
@@ -32,7 +32,9 @@
                                 <nav aria-label="breadcrumb">
                                     <ol class="breadcrumb">
                                         <li class="breadcrumb-item">
-                                            <a href="index.html">Home</a>
+                                            <a href="{{path('home')}}">
+                                                Home
+                                            </a>
                                         </li>
                                         <li class="breadcrumb-item active" aria-current="page">
                                             Projects
@@ -43,7 +45,7 @@
                         </div>
                     </div>
                     <div class="breadcrumbmask">
-                        <img class="mask1" src="assets/img/mask/layerShape-02.png" alt="mask" />
+                        <img class="mask1" src="{{asset('assets/img/mask/layerShape-02.png')}}" alt="mask"/>
                     </div>
                 </div>
             </div>

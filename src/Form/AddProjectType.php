@@ -100,7 +100,9 @@ class AddProjectType extends AbstractType
                 "attr" => [
 
                     "class" => "form-control",
-                    "placeholder" => "Résumé du projet"
+                    "placeholder" => "Résumé du projet",
+                    "maxlength" => 190,
+                    "minlength" => 100,
 
                 ], 
 

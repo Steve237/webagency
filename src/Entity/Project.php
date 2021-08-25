@@ -2,16 +2,20 @@
 
 namespace App\Entity;
 
-use App\Repository\ProjectRepository;
 use Doctrine\ORM\Mapping as ORM;
-use Vich\UploaderBundle\Mapping\Annotation as Vich;
-use Symfony\Component\HttpFoundation\File\File;
+use App\Repository\ProjectRepository;
 use Gedmo\Mapping\Annotation as Gedmo;
+use Symfony\Component\HttpFoundation\File\File;
+use Vich\UploaderBundle\Mapping\Annotation as Vich;
+use Symfony\Component\Validator\Constraints as Assert;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
+
 
 
 /**
  * @ORM\Entity(repositoryClass=ProjectRepository::class)
  * @Vich\Uploadable
+ * @UniqueEntity("title")
  */
 class Project
 {
@@ -39,11 +43,15 @@ class Project
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
+     * @Assert\Url(message = "Veuillez entrer une url valide")
      */
     private $url;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\File(mimeTypes = {"image/png", "image/jpg, image/png"},
+     * mimeTypesMessage = "Veuillez ajouter une image au format jpg, jpeg, png"
+     * )
      */
     private $coverimage;
 
@@ -59,6 +67,7 @@ class Project
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
+     * @Assert\Url(message = "Veuillez entrer une url valide")
      */
     private $videolink;
 
@@ -82,6 +91,12 @@ class Project
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\Length(
+     *      min = 100,
+     *      max = 190,
+     *      minMessage = "Veuillez entrer au moins 100 caractères",
+     *      maxMessage = "Veuillez entrer au moins 190 caractères"
+     * )
      */
     private $shortdescription;
 

@@ -5,9 +5,10 @@ namespace App\Controller;
 use App\Entity\Project;
 use App\Form\AddProjectType;
 use App\Form\UpdateProjectType;
-use App\Repository\ProjectRepository;
 use Doctrine\ORM\EntityManager;
+use App\Repository\ProjectRepository;
 use Doctrine\ORM\EntityManagerInterface;
+use Knp\Component\Pager\PaginatorInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -19,9 +20,15 @@ class AdminAreaController extends AbstractController
      * Liste des projets dans la page admin
      * @Route("/admin", name="admin_area")
      */
-    public function index(ProjectRepository $repoProject): Response
+    public function index(ProjectRepository $projectRepo, PaginatorInterface $paginator, Request $request): Response
     {
-        $projects = $repoProject->findAll();
+        $projectsList = $projectRepo->findAll();
+
+        $projects = $paginator->paginate(
+            $projectsList, /* query NOT result */
+            $request->query->getInt('page', 1), /*page number*/
+            20 /*limit per page*/
+        );
 
         return $this->render('portfolio/portfolio.html.twig', [
             
