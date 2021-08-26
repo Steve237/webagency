@@ -111,9 +111,10 @@ class UpdateProjectType extends AbstractType
             ])
 
 
-            ->add('image', FileType::class, [
+            ->add('coverimage', FileType::class, [
 
                 "label" => false,
+                "required" => false,
 
                 "attr" => [
 
@@ -122,9 +123,8 @@ class UpdateProjectType extends AbstractType
 
                 ], 
 
-                "required" => false,
 
-                "mapped" => false,
+                "data_class" => null,
 
             ])
             

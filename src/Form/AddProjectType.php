@@ -11,6 +11,7 @@ use Symfony\Component\Form\Extension\Core\Type\UrlType;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
+use Symfony\Component\Validator\Constraints\File;
 
 class AddProjectType extends AbstractType
 {
@@ -113,7 +114,7 @@ class AddProjectType extends AbstractType
             ])
 
 
-            ->add('imageFile', VichImageType::class, [
+            ->add('coverimage', FileType::class, [
 
                 "label" => false,
 
@@ -129,7 +130,6 @@ class AddProjectType extends AbstractType
             ])
 
 
-            
             ->add('videolink',  UrlType::class, [
 
                 "attr" => [

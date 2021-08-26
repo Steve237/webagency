@@ -6,7 +6,6 @@ use Doctrine\ORM\Mapping as ORM;
 use App\Repository\ProjectRepository;
 use Gedmo\Mapping\Annotation as Gedmo;
 use Symfony\Component\HttpFoundation\File\File;
-use Vich\UploaderBundle\Mapping\Annotation as Vich;
 use Symfony\Component\Validator\Constraints as Assert;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
@@ -14,7 +13,6 @@ use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
 /**
  * @ORM\Entity(repositoryClass=ProjectRepository::class)
- * @Vich\Uploadable
  * @UniqueEntity("title")
  */
 class Project
@@ -49,16 +47,14 @@ class Project
 
     /**
      * @ORM\Column(type="string", length=255)
-     * @Assert\File(mimeTypes = {"image/png", "image/jpg, image/png"},
-     * mimeTypesMessage = "Veuillez ajouter une image au format jpg, jpeg, png"
+     * @Assert\Image(
+     *      maxSize = "100000M",
+     *      maxSizeMessage = "Le fichier est trop large ({{ size }} {{ suffix }}). La taille maximum autorisée est {{ limit }} {{ suffix }}.",
+     *      mimeTypes = {"image/png", "image/jpg, image/png"},
+     *      mimeTypesMessage = "Veuillez ajouter une image au format jpg, jpeg, png",
      * )
      */
     private $coverimage;
-
-    /**
-     * @Vich\UploadableField(mapping="project_image", fileNameProperty="coverimage")
-     */
-    private $imageFile;
 
     /**
      * @ORM\Column(type="text")
@@ -67,7 +63,7 @@ class Project
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
-     * @Assert\Url(message = "Veuillez entrer une url valide")
+     * @Assert\Url(message="Veuillez entrer une url valide")
      */
     private $videolink;
 
@@ -165,20 +161,6 @@ class Project
         return $this;
     }
 
-    public function setImageFile(File $coverimage = null)
-    {
-        $this->imageFile = $coverimage;
-
-        if ($coverimage) {
-
-            $this->updatedAt = new \DateTime('now');
-        }
-    }
-
-    public function getImageFile()
-    {
-        return $this->imageFile;
-    }
 
     public function getDescription(): ?string
     {

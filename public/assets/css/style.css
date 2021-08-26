@@ -11598,6 +11598,12 @@ aside,
 
 }
 
+.about-image {
+
+  width:800px;
+  height:600px;
+}
+
 .stack-content {
 
   padding-bottom:20px;
@@ -11754,6 +11760,7 @@ background-color:white;
 
 }
 
+
 .project-presentation {
 
   color:white;
@@ -11832,5 +11839,8 @@ color:white;
 
 }
 
+.workimage {
 
+margin-left:150px;
 
+}

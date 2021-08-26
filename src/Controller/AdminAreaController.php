@@ -51,6 +51,26 @@ class AdminAreaController extends AbstractController
 
         if($form->isSubmitted() && $form->isValid()) {
 
+            // On récupère l'image principale et on l'envoie dans le dossier images
+            $mainImage = $form->get('coverimage')->getData();
+            $fileImage = md5(uniqid()).'.'.$mainImage->guessExtension();
+
+            // On vérifie l'extension de l'image
+            $extension = pathinfo($fileImage, PATHINFO_EXTENSION);
+
+            if($extension != "jpg" && $extension && "jpeg" && $extension != "png") {
+
+                $this->addFlash('invalid-images', 'Please upload images in format jpg, jpêg, png.');
+
+
+                return $this->redirectToRoute('add-product', ['id' => $category->getId()]);
+            
+            }
+            
+            $mainImage->move($this->getParameter('image_directory'), $fileImage);
+
+            $project->setCoverImage($fileImage);
+            
             $entity->persist($project);
 
             $entity->flush();
@@ -58,7 +78,6 @@ class AdminAreaController extends AbstractController
             $this->addFlash('success', 'Votre vidéo a bien été ajouté.');
 
             return $this->redirectToRoute('admin_area');
-
         }
         
         return $this->render('admin_area/add-project.html.twig', [
@@ -74,6 +93,8 @@ class AdminAreaController extends AbstractController
      */
     public function updateProject(Project $project, Request $request, EntityManagerInterface $entity): Response
     {   
+        // image de couverture en base de données
+        $image = $project->getCoverimage();
 
         $form = $this->createForm(UpdateProjectType::class, $project);
 
@@ -82,7 +103,7 @@ class AdminAreaController extends AbstractController
         if($form->isSubmitted() && $form->isValid()) {
 
              // On récupère l'image principale et on l'envoie dans le dossier images
-             $mainImage = $form->get('image')->getData();
+             $mainImage = $form->get('coverimage')->getData();
 
             if(!empty($mainImage)) {
 
@@ -103,6 +124,11 @@ class AdminAreaController extends AbstractController
                 $mainImage->move($this->getParameter('image_directory'), $fileImage);
 
                 $project->SetCoverImage($fileImage);
+
+            } else {
+
+                // On remet l'image de couverture initiale si il laisse le champ image vide
+                $project->SetCoverImage($image);
 
             }
 
